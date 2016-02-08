@@ -1,0 +1,5 @@
+#gitignore for Visual Studio Code project
+#using gulp and sass
+.vscode/
+node_modules/
+gulpfile.js
