@@ -1,5 +1,10 @@
 /* Main CSS doc
    By Andrew Reid East */
+   
+$socialLinksSize: 20px;
+
+/* NOTE: Will need to add "Autoprefixer" */
+
 
 body {
   font-family: Georgia, 'Times New Roman', Times, serif;
@@ -11,4 +16,36 @@ body {
 body {
   padding-top: 50px;
   padding-bottom: 20px;
+}
+
+#home {
+  /*height: 1vh;*/
+}
+
+.button-img {
+	height: 1.3em;
+	display: inline-block;
+}
+svg {
+  fill: currentColor;
+  vertical-align: bottom;
+}
+
+.socialUL {
+  margin-left: 0; /* setting li under this to inline-block adds margin-left/right: -15px. I do not know what part of Bootstrap is causing that */
+  margin-right: 0;
+}
+.socialUL li {
+  display:inline-block;
+}
+.socialLinks {
+  font-size: $socialLinksSize;
+}
+.socialLinks img {
+  height: $socialLinksSize;
+  width: $socialLinksSize;
+  display: inline-block;
+  vertical-align: bottom;
+  border-radius: 20%;
+  filter: grayscale(1) contrast(0.8);
 }
