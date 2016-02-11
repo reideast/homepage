@@ -5,8 +5,16 @@ $socialLinksSize: 20px;
 
 /* NOTE: Will need to add "Autoprefixer" */
 
+/* Main CSS doc
+   By Andrew Reid East */
+   
+$socialLinksSize: 20px;
+
+/* NOTE: Will need to add "Autoprefixer" */
+
 
 body {
+  position: relative;
   font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
@@ -24,7 +32,12 @@ body {
 
 .button-img {
 	height: 1.3em;
+  width: 1.3em;
 	display: inline-block;
+}
+#fcc-logo {
+	height: 1.3em;
+  width: 1.8em;
 }
 svg {
   fill: currentColor;
@@ -41,6 +54,13 @@ svg {
 .socialLinks {
   font-size: $socialLinksSize;
 }
+.socialLinks svg {
+  height: $socialLinksSize;
+  width: $socialLinksSize;
+  display: inline-block;
+  vertical-align: bottom;
+  border-radius: 20%;
+}
 .socialLinks img {
   height: $socialLinksSize;
   width: $socialLinksSize;
@@ -48,4 +68,15 @@ svg {
   vertical-align: bottom;
   border-radius: 20%;
   filter: grayscale(1) contrast(0.8);
+}
+
+#portfolio img {
+  width: 100%;
+}
+
+#contactButtonsContainer {
+  margin: 20px;
+}
+#contactFormContainer {
+  width: 80%;
 }

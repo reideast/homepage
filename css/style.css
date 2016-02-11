@@ -1,7 +1,11 @@
 /* Main CSS doc
    By Andrew Reid East */
 /* NOTE: Will need to add "Autoprefixer" */
+/* Main CSS doc
+   By Andrew Reid East */
+/* NOTE: Will need to add "Autoprefixer" */
 body {
+  position: relative;
   font-family: Georgia, 'Times New Roman', Times, serif; }
 
 /* From Bootstrap Jumbotron: */
@@ -15,7 +19,12 @@ body {
 
 .button-img {
   height: 1.3em;
+  width: 1.3em;
   display: inline-block; }
+
+#fcc-logo {
+  height: 1.3em;
+  width: 1.8em; }
 
 svg {
   fill: currentColor;
@@ -32,10 +41,27 @@ svg {
 .socialLinks {
   font-size: 20px; }
 
+.socialLinks svg {
+  height: 20px;
+  width: 20px;
+  display: inline-block;
+  vertical-align: bottom;
+  border-radius: 20%; }
+
 .socialLinks img {
   height: 20px;
   width: 20px;
   display: inline-block;
   vertical-align: bottom;
   border-radius: 20%;
-  filter: grayscale(1) contrast(0.8); }
+  -webkit-filter: grayscale(1) contrast(0.8);
+          filter: grayscale(1) contrast(0.8); }
+
+#portfolio img {
+  width: 100%; }
+
+#contactButtonsContainer {
+  margin: 20px; }
+
+#contactFormContainer {
+  width: 80%; }
