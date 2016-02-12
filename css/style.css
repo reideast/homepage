@@ -5,29 +5,112 @@
 .brand {
   font-family: "Indie Flower", cursive; }
 
+#home {
+  height: 27em; }
+
 .logoPlayground {
   position: relative;
   line-height: 0.66;
-  font-size: 20em; }
+  font-size: 25em; }
+
+.logoPlayground > div {
+  position: absolute; }
 
 .logoPlaygroundR {
-  position: absolute;
   top: 0px;
   left: 0px; }
 
 .logoPlaygroundE {
-  position: absolute;
+  top: 0.26em;
+  left: 0.40em; }
+
+.logoWords {
+  font-size: 0.5em;
+  position: relative; }
+
+.logoEid {
+  left: 0;
+  z-index: 5; }
+
+.logoPlaygroundR {
+  color: #0A576D; }
+
+.logoPlaygroundE {
+  color: #223890; }
+
+.logoSubheader {
+  position: relative;
+  font-size: 0.3em;
+  top: -0.1em;
+  left: 2.5em; }
+
+.logoSubheader > div {
+  position: absolute; }
+
+#reid:first-letter, #eUpper:first-letter, #systems:first-letter {
+  font-size: 1.5em; }
+
+#east {
   top: 1em;
-  left: 117px; }
+  left: 0.8em; }
+
+#systems {
+  float: right;
+  font-family: "Source Code Pro", monospace;
+  top: 2em;
+  left: 1.6em; }
+
+#eUpper {
+  font-size: 1.22em;
+  position: absolute;
+  line-height: 0.5;
+  top: 0; }
+
+#ast {
+  left: 0.9em;
+  bottom: -0.95em;
+  position: absolute; }
+
+/* Logo attempt # 3 */
+.left_logoSubheader {
+  position: relative;
+  font-size: 0.4em;
+  top: -0.1em; }
+
+#left_reid:first-letter, #left_E:first-letter, #left_systems:first-letter {
+  font-size: 1.5em; }
+
+#left_reid {
+  float: left; }
+
+#left_east {
+  top: 0;
+  float: left; }
+
+#left_E {
+  font-size: 1.22em;
+  position: absolute;
+  line-height: 0.5;
+  top: 0; }
+
+#left_ast {
+  left: 0.9em;
+  bottom: -0.3em;
+  position: relative; }
+
+#left_systems {
+  position: absolute;
+  font-family: "Source Code Pro", monospace;
+  font-size: 0.8em;
+  top: 1em; }
 
 #logoNavbar {
   font-size: 50px; }
 
 .logoContainer {
-  font-family: "Indie Flower", monospace;
+  font-family: "Indie Flower", cursive;
   position: relative;
-  line-height: 0.66;
-  font-weight: bold; }
+  line-height: 0.66; }
 
 .logoContainer div {
   position: absolute; }

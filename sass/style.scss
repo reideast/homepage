@@ -4,39 +4,175 @@
 
 $colorMain: #166A82;
 
+$color-primary-0: #0A576D;	// Main Primary color */
+$color-primary-1: #30798D;
+$color-primary-2: #156B84;
+$color-primary-3: #03475A;
+$color-primary-4: #013443;
+
+$color-secondary-1-0: #152877;	// Main Secondary color (1) */
+$color-secondary-1-1: #3E509A;
+$color-secondary-1-2: #223890;
+$color-secondary-1-3: #0A1C62;
+$color-secondary-1-4: #051249;
+
+$color-secondary-2-0: #AF7E0B;	// Main Secondary color (2) */
+$color-secondary-2-1: #E3B548;
+$color-secondary-2-2: #D49D1C;
+$color-secondary-2-3: #916500;
+$color-secondary-2-4: #6B4B00;
+
+$color-complement-0: #AF5E0B;	// Main Complement color */
+$color-complement-1: #E39648;
+$color-complement-2: #D4791C;
+$color-complement-3: #914900;
+$color-complement-4: #6B3600;
+
 $socialLinksSize: 20px;
 $fontBrand: "Indie Flower", cursive;
+$fontMonospace: "Source Code Pro", monospace;
 /* NOTE: Will need to use "Autoprefixer" */
 
 .brand {
   font-family: $fontBrand;
 }
 
+
+#home {
+  height: 27em;
+}
 .logoPlayground {
   position: relative;
   line-height: 0.66;
-  font-size: 20em;
+  font-size: 25em;
+}
+.logoPlayground > div {
+  position: absolute;
 }
 .logoPlaygroundR  {
-  position: absolute;
   top: 0px;
   left: 0px;
 }
 .logoPlaygroundE {
+  top: 0.26em;
+  left: 0.40em;
+}
+.logoWords {
+  //display: inline-block;
+  font-size: 0.5em;
+  position: relative;
+}
+.logoEid {
+  //left: 0.686em;
+  left: 0;
+  z-index: 5;
+}
+.logoPlaygroundR {
+  color: $color-primary-0;
+}
+.logoPlaygroundE {
+  color: $color-secondary-1-2;
+}
+.logoSubheader {
+  position: relative;
+  font-size: 0.3em;
+  top: -0.1em;
+  left: 2.5em;
+}
+.logoSubheader > div {
   position: absolute;
+}
+#reid:first-letter, #eUpper:first-letter, #systems:first-letter {
+  font-size: 1.5em;
+  //color:red;
+}
+#east {
   top: 1em;
-  left: 117px;
+  left: 0.8em;
+}
+#systems {
+  float: right;
+  font-family: $fontMonospace;
+  top: 2em;
+  left: 1.6em;
+}
+#eUpper {
+  font-size:1.22em;
+  position: absolute;
+  //display: block;
+  line-height: 0.5;
+  //height: 100%;
+  //float:left;
+  top: 0;
+}
+#ast {
+  //float:left;;
+  left: 0.9em;
+  bottom: -0.95em;
+  //position: relative;
+  position: absolute;
+  //display: block;
 }
 
+
+/* Logo attempt # 3 */
+.left_logoSubheader {
+  position: relative;
+  font-size: 0.4em;
+  top: -0.1em;
+  //left: 2.5em;
+}
+.left_logoSubheader > div {
+  //position: absolute;
+}
+#left_reid:first-letter, #left_E:first-letter, #left_systems:first-letter {
+  font-size: 1.5em;
+  //color:red;
+}
+#left_reid {
+  //position: absolute;
+  float:left;
+}
+#left_east {
+  top: 0;
+  //position: absolute;
+  float:left;
+  //left: 5em;
+}
+#left_E {
+  font-size:1.22em;
+  position: absolute;
+  //display: block;
+  line-height: 0.5;
+  //height: 100%;
+  //float:left;
+  top: 0;
+}
+#left_ast {
+  //float:left;
+  left: 0.9em;
+  bottom: -0.3em;
+  position: relative;
+  //position: absolute;
+  //display: block;
+  //font-family: $fontMonospace; 
+}
+#left_systems {
+  position: absolute;
+  font-family: $fontMonospace;
+  font-size: 0.8em;
+  top: 1em;
+  //left: 1.6em;
+}
 
 #logoNavbar {
  font-size: 50px; 
 }
 .logoContainer {
-  font-family: "Indie Flower", monospace;
+  font-family: $fontBrand;
   position: relative;
   line-height: 0.66;
-  font-weight: bold;
+  //font-weight: bold;
 }
 .logoContainer div {
   position: absolute;
