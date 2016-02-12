@@ -1,0 +1,12 @@
+changes to Bootstrap Template:
+
+@gray-base from #000 -> #202020
+@brand-primary 
+#156B84
+@brand-info 
+#223890
+
+sans serif: Hind, w/ @line-height-base 1.6 and size 14
+serif: Vollkorn
+monospace: Source Code Pro
+@heading-font-family from inherit -> @font-family-serif

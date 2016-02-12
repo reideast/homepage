@@ -1,9 +1,45 @@
 /* Main CSS doc
-   By Andrew Reid East */
-/* NOTE: Will need to add "Autoprefixer" */
-/* Main CSS doc
-   By Andrew Reid East */
-/* NOTE: Will need to add "Autoprefixer" */
+   By Andrew Reid East
+*/
+/* NOTE: Will need to use "Autoprefixer" */
+.brand {
+  font-family: "Indie Flower", cursive; }
+
+.logoPlayground {
+  position: relative;
+  line-height: 0.66;
+  font-size: 20em; }
+
+.logoPlaygroundR {
+  position: absolute;
+  top: 0px;
+  left: 0px; }
+
+.logoPlaygroundE {
+  position: absolute;
+  top: 1em;
+  left: 117px; }
+
+#logoNavbar {
+  font-size: 50px; }
+
+.logoContainer {
+  font-family: "Indie Flower", monospace;
+  position: relative;
+  line-height: 0.66;
+  font-weight: bold; }
+
+.logoContainer div {
+  position: absolute; }
+
+.logoR {
+  top: 0.1em;
+  left: 0; }
+
+.logoE {
+  top: 0.35em;
+  left: 0.45em; }
+
 body {
   position: relative;
   font-family: Georgia, 'Times New Roman', Times, serif; }
@@ -14,8 +50,12 @@ body {
   padding-top: 50px;
   padding-bottom: 20px; }
 
-#home {
-  /*height: 1vh;*/ }
+.navbar-brand {
+  padding-top: 0; }
+
+.navbar-brand img {
+  height: 50px;
+  width: 50px; }
 
 .button-img {
   height: 1.3em;

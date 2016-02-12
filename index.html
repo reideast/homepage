@@ -26,6 +26,9 @@
     <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
     <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
   <![endif]-->
+  
+  <link href='https://fonts.googleapis.com/css?family=Indie+Flower' rel='stylesheet' type='text/css'>
+  
 
   <link rel="stylesheet" href="css/style.css">
   <link rel="icon" href="../../favicon.ico">
@@ -40,7 +43,7 @@
 <div class="container">
 
   <!-- see: http://getbootstrap.com/components/#navbar -->
-  <nav class="navbar navbar-default navbar-fixed-top">
+  <nav style="height:50px;" class="navbar navbar-default navbar-fixed-top">
     <div class="container-fluid">
       <div class="navbar-header">
         <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#collapsing-area" aria-expanded="false">
@@ -48,14 +51,19 @@
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-        <a href="#top" class="navbar-brand">Andrew Reid East</a>
+        <a href="#home" class="navbar-brand">
+          <div class="logoContainer" id="logoNavbar">
+            <div class="logoR">R</div>
+            <div class="logoE">e</div>
+          </div>
+        </a>
       </div>
       <!-- /navbar-header-->
 
       <div class="collapse navbar-collapse" id="collapsing-area">
         <div id="navAreas">
         <ul class="nav nav-tabs navbar-nav navbar-right" role="tablist">
-          <li class="active"><a href="#top">Home</a></li>
+          <li class="active"><a href="#home">Home</a></li>
           <li><a href="#about">About</a></li>
           <li><a href="#portfolio">Portfolio</a></li>
           <li><a href="#contact">Contact</a></li>
@@ -84,24 +92,24 @@
       </div>
     </div>
     <!-- /container-fluid -->
-  </nav>
-  <!-- /navbar -->
+  </nav><!-- /navbar -->
 
 
-  <div class="jumbotron">
-    <section id="home">
-      <h1>Andrew Reid East<br /><small>Web Designer and IT Networking Expert</small></h1>
 
-      <div>
-        <a href="https://www.linkedin.com/in/andrewreideast" target="_none" class="btn btn-primary"><i class="fa fa-linkedin"></i> LinkedIn</a>
-        <a href="https://www.github.com/reideast" target="_none" class="btn btn-primary"><i class="fa fa-github"></i> GitHub</a>
-        <a href="https://www.twitter.com/andrewreideast" target="_none" class="btn btn-primary"><i class="fa fa-twitter"></i> Twitter</a>
-        <a href="http://www.freecodecamp.com/reideast" target="_none" class="btn btn-primary">
-          <svg id="fcc-logo" class="button-img">
-            <use xlink:href="#free-code-camp-logo"></use>
-          </svg> Free Code Camp</a>
+  <div class="jumbotron" id="home">
+    <header class="brand" id="pageTitel">
+      <div class="logoPlayground">
+        <div class="logoPlaygroundR">
+          R
+        </div>
+        <div class="logoPlaygroundE">
+          e
+        </div>
       </div>
-    </section>
+      <h1>eid</h1>
+      <h1>ast</h1>
+      <h2>Creations</h2>
+    </header>
   </div>
   <!-- /jumbotron -->
 
@@ -125,7 +133,7 @@
         </dl>
       </div>
       <div class="col-sm-6 col-md-4 col-lg-4">
-        <img class="img-circle img-responsive" width="300" height="300" src="http://andreweast.net/wp-content/uploads/2015/08/profile-pic-140119-268_east-001_smaller-e1439432292105-300x300.jpg" />
+        <img class="img-circle img-responsive" width="300" height="300" src="img/profilePic.jpg" />
       </div>
     </div>
   </section>
