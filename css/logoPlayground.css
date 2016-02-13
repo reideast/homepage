@@ -1,0 +1,193 @@
+/* Main CSS doc
+   By Andrew Reid East
+*/
+/* NOTE: Will need to use "Autoprefixer" */
+.brand {
+  font-family: "Indie Flower", cursive; }
+
+#home {
+  height: 27em; }
+
+.logoPlayground {
+  position: relative;
+  line-height: 0.66;
+  font-size: 25em; }
+
+.logoPlayground > div {
+  position: absolute; }
+
+.logoPlaygroundR {
+  top: 0px;
+  left: 0px; }
+
+.logoPlaygroundE {
+  top: 0.26em;
+  left: 0.40em; }
+
+.logoWords {
+  font-size: 0.5em;
+  position: relative; }
+
+.logoEid {
+  left: 0;
+  z-index: 5; }
+
+.logoPlaygroundR {
+  color: #0A576D; }
+
+.logoPlaygroundE {
+  color: #223890; }
+
+.logoSubheader {
+  position: relative;
+  font-size: 0.3em;
+  top: -0.1em;
+  left: 2.5em; }
+
+.logoSubheader > div {
+  position: absolute; }
+
+#reid:first-letter, #eUpper:first-letter, #systems:first-letter {
+  font-size: 1.5em; }
+
+#east {
+  top: 1em;
+  left: 0.8em; }
+
+#systems {
+  float: right;
+  font-family: "Source Code Pro", monospace;
+  top: 2em;
+  left: 1.6em; }
+
+#eUpper {
+  font-size: 1.22em;
+  position: absolute;
+  line-height: 0.5;
+  top: 0; }
+
+#ast {
+  left: 0.9em;
+  bottom: -0.95em;
+  position: absolute; }
+
+/* Logo attempt # 3 */
+.left_logoSubheader {
+  position: relative;
+  font-size: 0.4em;
+  top: -0.1em; }
+
+#left_reid:first-letter, #left_E:first-letter, #left_systems:first-letter {
+  font-size: 1.5em; }
+
+#left_reid {
+  float: left; }
+
+#left_east {
+  top: 0;
+  float: left; }
+
+#left_E {
+  font-size: 1.22em;
+  position: absolute;
+  line-height: 0.5;
+  top: 0; }
+
+#left_ast {
+  left: 0.9em;
+  bottom: -0.3em;
+  position: relative; }
+
+#left_systems {
+  position: absolute;
+  font-family: "Source Code Pro", monospace;
+  font-size: 0.8em;
+  top: 1em; }
+
+#logoNavbar {
+  font-size: 50px; }
+
+.logoContainer {
+  font-family: "Indie Flower", cursive;
+  position: relative;
+  line-height: 0.66; }
+
+.logoContainer div {
+  position: absolute; }
+
+.logoR {
+  top: 0.1em;
+  left: 0; }
+
+.logoE {
+  top: 0.35em;
+  left: 0.45em; }
+
+.pageTitle {
+  font-family: "Source Code Pro", monospace; }
+
+body {
+  position: relative;
+  font-family: Georgia, 'Times New Roman', Times, serif; }
+
+/* From Bootstrap Jumbotron: */
+/* Move down content because we have a fixed navbar that is 50px tall */
+body {
+  padding-top: 50px;
+  padding-bottom: 20px; }
+
+.navbar-brand {
+  padding-top: 0; }
+
+.navbar-brand img {
+  height: 50px;
+  width: 50px; }
+
+.button-img {
+  height: 1.3em;
+  width: 1.3em;
+  display: inline-block; }
+
+#fcc-logo {
+  height: 1.3em;
+  width: 1.8em; }
+
+svg {
+  fill: currentColor;
+  vertical-align: bottom; }
+
+.socialUL {
+  margin-left: 0;
+  /* setting li under this to inline-block adds margin-left/right: -15px. I do not know what part of Bootstrap is causing that */
+  margin-right: 0; }
+
+.socialUL li {
+  display: inline-block; }
+
+.socialLinks {
+  font-size: 20px; }
+
+.socialLinks svg {
+  height: 20px;
+  width: 20px;
+  display: inline-block;
+  vertical-align: bottom;
+  border-radius: 20%; }
+
+.socialLinks img {
+  height: 20px;
+  width: 20px;
+  display: inline-block;
+  vertical-align: bottom;
+  border-radius: 20%;
+  -webkit-filter: grayscale(1) contrast(0.8);
+          filter: grayscale(1) contrast(0.8); }
+
+#portfolio img {
+  width: 100%; }
+
+#contactButtonsContainer {
+  margin: 20px; }
+
+#contactFormContainer {
+  width: 80%; }

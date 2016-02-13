@@ -10,3 +10,5 @@ sans serif: Hind, w/ @line-height-base 1.6 and size 14
 serif: Vollkorn
 monospace: Source Code Pro
 @heading-font-family from inherit -> @font-family-serif
+
+body font: sans serif Lato 18px, line-height 1.5 (==27px) margin-top/bottom: 0.75em (==13.5px)

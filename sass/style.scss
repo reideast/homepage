@@ -33,136 +33,43 @@ $fontBrand: "Indie Flower", cursive;
 $fontMonospace: "Source Code Pro", monospace;
 /* NOTE: Will need to use "Autoprefixer" */
 
+
+body {
+  background-image: url(../img/16024807396_de7acfd592_k.jpg);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: fixed;
+  background-size: cover;
+  position: relative;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+/* From Bootstrap Jumbotron: */
+/* Move down content because we have a fixed navbar that is 50px tall */
+  padding-top: 50px;
+  padding-bottom: 20px;
+}
+
 .brand {
   font-family: $fontBrand;
 }
 
+.pageTitle {
+  font-family: $fontMonospace;
+}
 
-#home {
+#header {
   height: 27em;
 }
-.logoPlayground {
-  position: relative;
-  line-height: 0.66;
-  font-size: 25em;
-}
-.logoPlayground > div {
-  position: absolute;
-}
-.logoPlaygroundR  {
-  top: 0px;
-  left: 0px;
-}
-.logoPlaygroundE {
-  top: 0.26em;
-  left: 0.40em;
-}
-.logoWords {
-  //display: inline-block;
-  font-size: 0.5em;
-  position: relative;
-}
-.logoEid {
-  //left: 0.686em;
+#header::after {
+  /* https://css-tricks.com/snippets/css/transparent-background-images/ */
+  content: "blargburgrlbargggg";
+  background-color: white;
+  opacity: 0.4;
+  top: 0;
   left: 0;
-  z-index: 5;
-}
-.logoPlaygroundR {
-  color: $color-primary-0;
-}
-.logoPlaygroundE {
-  color: $color-secondary-1-2;
-}
-.logoSubheader {
-  position: relative;
-  font-size: 0.3em;
-  top: -0.1em;
-  left: 2.5em;
-}
-.logoSubheader > div {
+  bottom: 0;
+  right: 0;
   position: absolute;
-}
-#reid:first-letter, #eUpper:first-letter, #systems:first-letter {
-  font-size: 1.5em;
-  //color:red;
-}
-#east {
-  top: 1em;
-  left: 0.8em;
-}
-#systems {
-  float: right;
-  font-family: $fontMonospace;
-  top: 2em;
-  left: 1.6em;
-}
-#eUpper {
-  font-size:1.22em;
-  position: absolute;
-  //display: block;
-  line-height: 0.5;
-  //height: 100%;
-  //float:left;
-  top: 0;
-}
-#ast {
-  //float:left;;
-  left: 0.9em;
-  bottom: -0.95em;
-  //position: relative;
-  position: absolute;
-  //display: block;
-}
-
-
-/* Logo attempt # 3 */
-.left_logoSubheader {
-  position: relative;
-  font-size: 0.4em;
-  top: -0.1em;
-  //left: 2.5em;
-}
-.left_logoSubheader > div {
-  //position: absolute;
-}
-#left_reid:first-letter, #left_E:first-letter, #left_systems:first-letter {
-  font-size: 1.5em;
-  //color:red;
-}
-#left_reid {
-  //position: absolute;
-  float:left;
-}
-#left_east {
-  top: 0;
-  //position: absolute;
-  float:left;
-  //left: 5em;
-}
-#left_E {
-  font-size:1.22em;
-  position: absolute;
-  //display: block;
-  line-height: 0.5;
-  //height: 100%;
-  //float:left;
-  top: 0;
-}
-#left_ast {
-  //float:left;
-  left: 0.9em;
-  bottom: -0.3em;
-  position: relative;
-  //position: absolute;
-  //display: block;
-  //font-family: $fontMonospace; 
-}
-#left_systems {
-  position: absolute;
-  font-family: $fontMonospace;
-  font-size: 0.8em;
-  top: 1em;
-  //left: 1.6em;
+  z-index: 10;
 }
 
 #logoNavbar {
@@ -188,18 +95,6 @@ $fontMonospace: "Source Code Pro", monospace;
   
 
 
-body {
-  position: relative;
-  font-family: Georgia, 'Times New Roman', Times, serif;
-}
-
-
-/* From Bootstrap Jumbotron: */
-/* Move down content because we have a fixed navbar that is 50px tall */
-body {
-  padding-top: 50px;
-  padding-bottom: 20px;
-}
 
 .navbar-brand{
   padding-top: 0;

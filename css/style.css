@@ -2,107 +2,39 @@
    By Andrew Reid East
 */
 /* NOTE: Will need to use "Autoprefixer" */
+body {
+  background-image: url(../img/16024807396_de7acfd592_k.jpg);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: fixed;
+  background-size: cover;
+  position: relative;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  /* From Bootstrap Jumbotron: */
+  /* Move down content because we have a fixed navbar that is 50px tall */
+  padding-top: 50px;
+  padding-bottom: 20px; }
+
 .brand {
   font-family: "Indie Flower", cursive; }
 
-#home {
+.pageTitle {
+  font-family: "Source Code Pro", monospace; }
+
+#header {
   height: 27em; }
 
-.logoPlayground {
-  position: relative;
-  line-height: 0.66;
-  font-size: 25em; }
-
-.logoPlayground > div {
-  position: absolute; }
-
-.logoPlaygroundR {
-  top: 0px;
-  left: 0px; }
-
-.logoPlaygroundE {
-  top: 0.26em;
-  left: 0.40em; }
-
-.logoWords {
-  font-size: 0.5em;
-  position: relative; }
-
-.logoEid {
-  left: 0;
-  z-index: 5; }
-
-.logoPlaygroundR {
-  color: #0A576D; }
-
-.logoPlaygroundE {
-  color: #223890; }
-
-.logoSubheader {
-  position: relative;
-  font-size: 0.3em;
-  top: -0.1em;
-  left: 2.5em; }
-
-.logoSubheader > div {
-  position: absolute; }
-
-#reid:first-letter, #eUpper:first-letter, #systems:first-letter {
-  font-size: 1.5em; }
-
-#east {
-  top: 1em;
-  left: 0.8em; }
-
-#systems {
-  float: right;
-  font-family: "Source Code Pro", monospace;
-  top: 2em;
-  left: 1.6em; }
-
-#eUpper {
-  font-size: 1.22em;
-  position: absolute;
-  line-height: 0.5;
-  top: 0; }
-
-#ast {
-  left: 0.9em;
-  bottom: -0.95em;
-  position: absolute; }
-
-/* Logo attempt # 3 */
-.left_logoSubheader {
-  position: relative;
-  font-size: 0.4em;
-  top: -0.1em; }
-
-#left_reid:first-letter, #left_E:first-letter, #left_systems:first-letter {
-  font-size: 1.5em; }
-
-#left_reid {
-  float: left; }
-
-#left_east {
+#header::after {
+  /* https://css-tricks.com/snippets/css/transparent-background-images/ */
+  content: "blargburgrlbargggg";
+  background-color: white;
+  opacity: 0.4;
   top: 0;
-  float: left; }
-
-#left_E {
-  font-size: 1.22em;
+  left: 0;
+  bottom: 0;
+  right: 0;
   position: absolute;
-  line-height: 0.5;
-  top: 0; }
-
-#left_ast {
-  left: 0.9em;
-  bottom: -0.3em;
-  position: relative; }
-
-#left_systems {
-  position: absolute;
-  font-family: "Source Code Pro", monospace;
-  font-size: 0.8em;
-  top: 1em; }
+  z-index: 10; }
 
 #logoNavbar {
   font-size: 50px; }
@@ -122,16 +54,6 @@
 .logoE {
   top: 0.35em;
   left: 0.45em; }
-
-body {
-  position: relative;
-  font-family: Georgia, 'Times New Roman', Times, serif; }
-
-/* From Bootstrap Jumbotron: */
-/* Move down content because we have a fixed navbar that is 50px tall */
-body {
-  padding-top: 50px;
-  padding-bottom: 20px; }
 
 .navbar-brand {
   padding-top: 0; }
