@@ -22,19 +22,9 @@ body {
   font-family: "Source Code Pro", monospace; }
 
 #header {
-  height: 27em; }
-
-#header::after {
-  /* https://css-tricks.com/snippets/css/transparent-background-images/ */
-  content: "blargburgrlbargggg";
+  height: 27em;
   background-color: white;
-  opacity: 0.4;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  position: absolute;
-  z-index: 10; }
+  opacity: 0.6; }
 
 #logoNavbar {
   font-size: 50px; }
