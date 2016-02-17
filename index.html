@@ -37,13 +37,6 @@
 <!-- Template based on http://getbootstrap.com/examples/jumbotron/ Source code in docs/examples/jumbotron https://github.com/twbs/bootstrap/releases/download/v3.3.6/bootstrap-3.3.6-dist.zip -->
 
 <body>
-<!-- **************************************************************************************************** -->  
-<!-- **************************************************************************************************** -->  
-<!-- **************************************************************************************************** -->  
-<div class="container">
-  <div id="header" class="container">
-    <h1>Seedling Design Systems</h1>
-  </div>
 
   <!-- see: http://getbootstrap.com/components/#navbar -->
   <nav style="height:50px;" class="navbar navbar-default navbar-fixed-top">
@@ -82,13 +75,7 @@
             <li class="socialLinks"><a href="https://www.linkedin.com/in/andrewreideast" target="_none"><i class="fa fa-linkedin-square"></i></a></li>
             <li class="socialLinks"><a href="https://www.github.com/reideast" target="_none"><i class="fa fa-github-square"></i></a></li>
             <li class="socialLinks"><a href="https://www.twitter.com/andrewreideast" target="_none"><i class="fa fa-twitter-square"></i></a></li>
-            <li class="socialLinks">
-              <a href="https://about.me/andrewreideast" target="_none">
-                <svg class="" width="14" height="14">
-                  <use xlink:href="#aboutme-logo"></use>
-                </svg>
-              </a>
-            </li>
+            <li class="socialLinks"><a href="https://about.me/andrewreideast" target="_none"><svg class="" width="14" height="14"><use xlink:href="#aboutme-logo"></use></svg></a> </li>
           </ul>
         </ul>
         </div>
@@ -96,8 +83,27 @@
     </div>
     <!-- /container-fluid -->
   </nav><!-- /navbar -->
+  
+<div id="containerHeaderImage">
+  <div id="headerImage">
+  </div>
+</div>
+<div id="containerRootsImage">
+  <div id="rootsImage">
+  </div>
+</div>
 
+<div id="containerTitle" class="container-fluid">
+  <div id="title">
+    <div class="row">
+      <div class="col-sm-offset- col-xs-3">
+        <h1>Seedling Design Systems</h1>
+      </div>
+    </div>
+  </div>
+</div>
 
+<div id="containerContent" class="container">
   <section id="about">
     <div class="row">
       <div class="col-sm-6 col-md-8 col-lg-8">
@@ -107,7 +113,7 @@
         <p>I would love to share with you a slice of my digital world, and show how my excitement can be applied to your latest idea or project. Please view my <a href="#portfolio">Portfolio</a> to see the quality of my work firsthand, and then <a href="#contact">Contact Me</a>          so I can get started right away creating for you!.</p>
       </div>
       <div class="col-sm-6 col-md-4 col-lg-4">
-        <img class="img-circle img-responsive" width="300" height="300" src="img/profilePic.jpg" />
+        <!--<img class="img-circle img-responsive" width="300" height="300" src="img/profilePic.jpg" />-->
       </div>
     </div>
   </section>
@@ -144,6 +150,7 @@
     </g>
   </symbol>
 </svg>
+<svg style="display:none;" xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg">
 
 <!-- **************************************************************************************************** -->  
 <!-- **************************************************************************************************** -->  
@@ -156,15 +163,18 @@
   
   <script>
     $(document).ready(function() {
-    console.log("ready!");
-    $('body').scrollspy(
-      {
-        target: '#navAreas',
-        offset: 50
-      }
-    );
+      console.log("ready!");
+      $('body').scrollspy(
+        {
+          target: '#navAreas',
+          offset: 50
+        });
+        
+      // //http://stackoverflow.com/questions/16810948/svg-transformations-in-javascript
+      // var matrix = $("#svgRootsG").createSVGMatrix();
+      // matrix = matrix.translate(400,0);
     
-  });
+    });
   </script>
 </body>
 

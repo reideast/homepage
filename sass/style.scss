@@ -2,66 +2,98 @@
    By Andrew Reid East
 */
 
-$colorMain: #166A82;
+$colorBrown: #2f2318;
 
-$color-primary-0: #0A576D;	// Main Primary color */
-$color-primary-1: #30798D;
-$color-primary-2: #156B84;
-$color-primary-3: #03475A;
-$color-primary-4: #013443;
-
-$color-secondary-1-0: #152877;	// Main Secondary color (1) */
-$color-secondary-1-1: #3E509A;
-$color-secondary-1-2: #223890;
-$color-secondary-1-3: #0A1C62;
-$color-secondary-1-4: #051249;
-
-$color-secondary-2-0: #AF7E0B;	// Main Secondary color (2) */
-$color-secondary-2-1: #E3B548;
-$color-secondary-2-2: #D49D1C;
-$color-secondary-2-3: #916500;
-$color-secondary-2-4: #6B4B00;
-
-$color-complement-0: #AF5E0B;	// Main Complement color */
-$color-complement-1: #E39648;
-$color-complement-2: #D4791C;
-$color-complement-3: #914900;
-$color-complement-4: #6B3600;
-
+$navbarHeight: 50px;
+$headerHeight: 100vh;
 $socialLinksSize: 20px;
 $fontBrand: "Indie Flower", cursive;
 $fontMonospace: "Source Code Pro", monospace;
+$fontAdam: 'Adam CG Pro', sans-serif;
+
+@import 'adamcgpro';
 /* NOTE: Will need to use "Autoprefixer" */
 
 
 body {
-  background-image: url(../img/16024807396_de7acfd592_k.jpg);
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-attachment: fixed;
-  background-size: cover;
-  position: relative;
   font-family: Georgia, 'Times New Roman', Times, serif;
 /* From Bootstrap Jumbotron: */
-/* Move down content because we have a fixed navbar that is 50px tall */
-  padding-top: 50px;
+/* Move down content because we have a fixed navbar that is $navbarHeight tall */
+  padding-top: $navbarHeight;
   padding-bottom: 20px;
+  
+  background-color: $colorBrown;
 }
 
-.brand {
-  font-family: $fontBrand;
+//*************************************** Header Images ***************************************
+#containerHeaderImage {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: $headerHeight;
+  width: 100%;
+  z-index: -10;
+}
+#headerImage {
+  position: relative;
+  top: $navbarHeight;
+  height: calc(100% - 50px);
+  // height: 100%;
+  // width: 100%;
+  // margin-top: $navbarHeight;
+  background-image: url(../img/16024807396_de7acfd592_k_crop.jpg);
+  background-repeat: no-repeat;
+  background-position: center right;
+  // background-attachment: fixed;
+  background-size: cover;
 }
 
-.pageTitle {
-  font-family: $fontMonospace;
+#containerRootsImage {
+  position: absolute;
+  top: calc(#{$headerHeight} - 20px);
+  left: 0;
+  height: $headerHeight;
+  width: 100%;
+  z-index: -20;
+}
+#rootsImage {
+  position: relative;
+  top: 0;
+  // NOTE: to move the root relative to the width of the whole image, modify <g id="rootG" transform="translate(MODIFY_THIS_X=480, y=-124.03913) 
+  //right: 0px;
+  //width: 100%;
+  //height: calc(100% - 50px);
+  height: 100%;
+  background-image: url(../img/rootsOnlyWeb.svg);
+  background-repeat: no-repeat;
+  background-position: top right;
+  background-size: cover;
 }
 
-#header {
-  height: 27em;
-  background-color: white;
-  opacity: 0.6;
+//*************************************** Page Title ***************************************
+#containerTitle{
+  position: absolute;
+  top: $navbarHeight;
+}
+#title {
+  h1 {
+    font-family: $fontAdam;
+    // font-style: italic;
+    color: $colorBrown;
+    font-size: 5em;
+  }
+  
 }
 
+//*************************************** Navbar ***************************************
+//*************************************** "RE" Logo ***************************************
+.navbar-brand{
+  padding-top: 0;
+}
+.navbar-brand img {
+  height: $navbarHeight;
+  width: $navbarHeight;
+}
 #logoNavbar {
  font-size: 50px; 
 }
@@ -82,33 +114,8 @@ body {
   top: 0.35em;
   left: 0.45em;
 }
-  
 
-
-
-.navbar-brand{
-  padding-top: 0;
-}
-
-.navbar-brand img {
-  height: 50px;
-  width: 50px;
-}
-
-.button-img {
-	height: 1.3em;
-  width: 1.3em;
-	display: inline-block;
-}
-#fcc-logo {
-	height: 1.3em;
-  width: 1.8em;
-}
-svg {
-  fill: currentColor;
-  vertical-align: bottom;
-}
-
+//*************************************** Navbar Social Icons ***************************************
 .socialUL {
   margin-left: 0; /* setting li under this to inline-block adds margin-left/right: -15px. I do not know what part of Bootstrap is causing that */
   margin-right: 0;
@@ -125,6 +132,7 @@ svg {
   display: inline-block;
   vertical-align: bottom;
   border-radius: 20%;
+  fill: currentColor;
 }
 .socialLinks img {
   height: $socialLinksSize;
@@ -135,13 +143,19 @@ svg {
   filter: grayscale(1) contrast(0.8);
 }
 
-#portfolio img {
-  width: 100%;
+
+//*************************************** Main Content ***************************************
+#containerContent {
+  position: relative;
+  top: $headerHeight;
+  //background: transparent;
 }
 
-#contactButtonsContainer {
-  margin: 20px;
-}
-#contactFormContainer {
-  width: 80%;
+// svg {
+//   fill: currentColor;
+//}
+.button-img {
+	height: 1.3em;
+  width: 1.3em;
+	display: inline-block;
 }
