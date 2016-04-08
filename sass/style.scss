@@ -2,7 +2,12 @@
    By Andrew Reid East
 */
 
-$colorBrown: #2f2318;
+$bgimage: "../img/23363119756_75389b2311_o_stretch.jpg";
+
+// $soilBrown: #403930;
+$soilBrown: #282923;
+$colorBrown: #2f1e0e;
+// $colorBrown: #2f2318;
 
 $navbarHeight: 50px;
 $headerHeight: 100vh;
@@ -19,7 +24,7 @@ body {
   font-family: Georgia, 'Times New Roman', Times, serif;
 /* From Bootstrap Jumbotron: */
 /* Move down content because we have a fixed navbar that is $navbarHeight tall */
-  padding-top: $navbarHeight;
+  // padding-top: $navbarHeight;
   padding-bottom: 20px;
   
   background-color: $colorBrown;
@@ -36,44 +41,59 @@ body {
 }
 #headerImage {
   position: relative;
-  top: $navbarHeight;
-  height: calc(100% - 50px);
+  // top: $navbarHeight;
+  // height: calc(100% - 50px);
+  height: 100vh;
   // height: 100%;
   // width: 100%;
   // margin-top: $navbarHeight;
-  background-image: url(../img/16024807396_de7acfd592_k_crop.jpg);
+  background-image: url($bgimage);
   background-repeat: no-repeat;
-  background-position: center right;
+  // background-position: center right;
   // background-attachment: fixed;
+  // background-size: cover;
   background-size: cover;
+  @media (min-aspect-ratio: 2/1) {
+    background-size: 100%;
+  }
+  
+  background-position: bottom right;
+  box-shadow: inset 0 -16px 16px -10px $colorBrown, 
+              0 16px 16px -10px $colorBrown;
 }
 
 #containerRootsImage {
+  box-shadow: 0 -16px 16px -10px $colorBrown;
   position: absolute;
-  top: calc(#{$headerHeight} - 20px);
+  top: $headerHeight;
+  // top: calc(#{$headerHeight} - 20px);
   left: 0;
-  height: $headerHeight;
+  // height: $headerHeight;
+  height: 580px;
   width: 100%;
   z-index: -20;
 }
 #rootsImage {
   position: relative;
-  top: 0;
+  top: -20px;
   // NOTE: to move the root relative to the width of the whole image, modify <g id="rootG" transform="translate(MODIFY_THIS_X=480, y=-124.03913) 
   //right: 0px;
   //width: 100%;
   //height: calc(100% - 50px);
-  height: 100%;
+  height: 580px;
   background-image: url(../img/rootsOnlyWeb.svg);
   background-repeat: no-repeat;
   background-position: top right;
   background-size: cover;
+  @media (min-aspect-ratio: 2/1) {
+    background-size: 100%;
+  }
 }
 
 //*************************************** Page Title ***************************************
 #containerTitle{
   position: absolute;
-  top: $navbarHeight;
+  // top: $navbarHeight;
 }
 #title {
   h1 {
@@ -81,6 +101,8 @@ body {
     // font-style: italic;
     color: $colorBrown;
     font-size: 5em;
+    line-height: 1.65;
+    margin-top: 0;
   }
   
 }
