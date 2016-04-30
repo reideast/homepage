@@ -2,12 +2,21 @@
    By Andrew Reid East
 */
 
-$bgimage: "../img/23363119756_75389b2311_o_stretch.jpg";
+// $bgimage: "../img/23363119756_75389b2311_o_stretch.jpg";
+$bgimage: "../.ideas/stock-photo-young-plant-in-the-morning-light-174839018_crop.jpg";
+$bgUnderground: "../.ideas/stock-photo-young-plant-in-the-morning-light-174839018_crop_underground.jpg";
 
 // $soilBrown: #403930;
 $soilBrown: #282923;
-$colorBrown: #2f1e0e;
+$colorBrown: #0A0906;
+// $colorBrown: #2f1e0e;
 // $colorBrown: #2f2318;
+$colorGreen: #34a814;
+$colorRed: #a81434;
+$colorBlue: #1434a8;
+$colorLightGreen: #92A270;
+$colorLightGreenBrighter: #9BB95B;
+$colorText: $colorBlue;
 
 $navbarHeight: 50px;
 $headerHeight: 100vh;
@@ -28,6 +37,7 @@ body {
   padding-bottom: 20px;
   
   background-color: $colorBrown;
+  color: $colorText;
 }
 
 //*************************************** Header Images ***************************************
@@ -81,7 +91,7 @@ body {
   //width: 100%;
   //height: calc(100% - 50px);
   height: 580px;
-  background-image: url(../img/rootsOnlyWeb.svg);
+  background-image: url($bgUnderground), url(../img/rootsOnlyWeb.svg); //TODO: move $bgUnderground to it's own element to simplify bg-position
   background-repeat: no-repeat;
   background-position: top right;
   background-size: cover;
@@ -170,7 +180,11 @@ body {
 #containerContent {
   position: relative;
   top: $headerHeight;
-  //background: transparent;
+  margin-top: 10px;
+}
+#intro {
+  background-color: $colorLightGreen;
+  border-radius: 8px;
 }
 
 // svg {
