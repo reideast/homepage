@@ -28,7 +28,7 @@ body {
 #headerImage {
   position: relative;
   height: 100vh;
-  background-image: url("../.ideas/stock-photo-young-plant-in-the-morning-light-174839018_crop.jpg");
+  background-image: url("../.ideas/stock-photo-young-plant-in-the-morning-light-174839018_crop.png");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: bottom right; }
@@ -38,24 +38,11 @@ body {
 
 #containerRootsImage {
   position: absolute;
-  top: 100vh;
+  top: calc(100vh - 50px);
   left: 0;
   height: 580px;
   width: 100%;
   z-index: -20; }
-
-#headerImageLower {
-  background-image: url("../.ideas/stock-photo-young-plant-in-the-morning-light-174839018_crop_underground.png");
-  position: absolute;
-  width: 100%;
-  top: 0px;
-  height: 100px;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: top right; }
-  @media (min-aspect-ratio: 2 / 1) {
-    #headerImageLower {
-      background-size: 100%; } }
 
 #rootsImage {
   position: absolute;

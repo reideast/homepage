@@ -3,7 +3,7 @@
 */
 
 // $bgimage: "../img/23363119756_75389b2311_o_stretch.jpg";
-$bgimage: "../.ideas/stock-photo-young-plant-in-the-morning-light-174839018_crop.jpg";
+$bgimage: "../.ideas/stock-photo-young-plant-in-the-morning-light-174839018_crop.png";
 $bgUnderground: "../.ideas/stock-photo-young-plant-in-the-morning-light-174839018_crop_underground.png";
 
 // $soilBrown: #403930;
@@ -75,26 +75,13 @@ body {
 #containerRootsImage {
   // box-shadow: 0 -16px 16px -10px $colorBrown;
   position: absolute;
-  top: $headerHeight;
-  // top: calc(#{$headerHeight} - 20px);
+  // top: $headerHeight;
+  top: calc(#{$headerHeight} - 50px);
   left: 0;
   // height: $headerHeight;
   height: 580px;
   width: 100%;
   z-index: -20;
-}
-#headerImageLower {
-  background-image: url($bgUnderground);
-  position: absolute;
-  width: 100%;
-  top: 0px;
-  height: 100px; //TODO: 100px is estimate. can it be calculated?
-  background-repeat: no-repeat;
-  background-size: cover;
-  @media (min-aspect-ratio: 2/1) {
-    background-size: 100%;
-  }
-  background-position: top right;
 }
 #rootsImage {
   position: absolute;
