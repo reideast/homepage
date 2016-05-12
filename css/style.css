@@ -14,8 +14,8 @@ body {
   /* From Bootstrap Jumbotron: */
   /* Move down content because we have a fixed navbar that is $navbarHeight tall */
   padding-bottom: 20px;
-  background-color: #0A0906;
-  color: #1434a8; }
+  background-color: #A9DA88;
+  color: #0A0906; }
 
 #containerHeaderImage {
   position: absolute;
@@ -31,7 +31,7 @@ body {
   background-image: url("../img/shutterstock_centered.jpg");
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: bottom right; }
+  background-position: bottom center; }
   @media (min-aspect-ratio: 2 / 1) {
     #headerImage {
       background-size: 100%; } }
@@ -56,9 +56,6 @@ body {
   @media (min-aspect-ratio: 2 / 1) {
     #rootsImage {
       background-size: 100%; } }
-
-#containerTitle {
-  position: absolute; }
 
 #title h1 {
   font-family: "Adam CG Pro", sans-serif;
