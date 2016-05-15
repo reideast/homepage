@@ -51,7 +51,7 @@ body {
   height: 580px;
   background-image: url(../img/rootsOnlyWeb.svg);
   background-repeat: no-repeat;
-  background-position: top right;
+  background-position: top center;
   background-size: cover; }
   @media (min-aspect-ratio: 2 / 1) {
     #rootsImage {
