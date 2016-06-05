@@ -2,12 +2,23 @@
    By Andrew Reid East
 */
 
-$bgimage: "../img/23363119756_75389b2311_o_stretch.jpg";
+// $bgimage: "../img/23363119756_75389b2311_o_stretch.jpg";
+$bgimage: "../img/shutterstock_centered.jpg";
+$bgimage: "../.ideas/stock-photo-young-plant-in-the-morning-light-174839018_crop.png";
+$bgUnderground: "../.ideas/stock-photo-young-plant-in-the-morning-light-174839018_crop_underground.png";
 
 // $soilBrown: #403930;
 $soilBrown: #282923;
-$colorBrown: #2f1e0e;
+$colorBrown: #0A0906;
+// $colorBrown: #2f1e0e;
 // $colorBrown: #2f2318;
+$colorGreen: #34a814;
+$colorRed: #a81434;
+$colorBlue: #1434a8;
+$colorLightGreen: #92A270;
+$colorLightGreenBrighter: #9BB95B;
+
+$colorText: $colorBrown;
 
 $navbarHeight: 50px;
 $headerHeight: 100vh;
@@ -15,6 +26,8 @@ $socialLinksSize: 20px;
 $fontBrand: "Indie Flower", cursive;
 $fontMonospace: "Source Code Pro", monospace;
 $fontAdam: 'Adam CG Pro', sans-serif;
+
+$colorWhiteGreen: #A9DA88;
 
 @import 'adamcgpro';
 /* NOTE: Will need to use "Autoprefixer" */
@@ -27,7 +40,8 @@ body {
   // padding-top: $navbarHeight;
   padding-bottom: 20px;
   
-  background-color: $colorBrown;
+  background-color: $colorWhiteGreen;
+  color: $colorText;
 }
 
 //*************************************** Header Images ***************************************
@@ -57,16 +71,16 @@ body {
     background-size: 100%;
   }
   
-  background-position: bottom right;
-  box-shadow: inset 0 -16px 16px -10px $colorBrown, 
-              0 16px 16px -10px $colorBrown;
+  background-position: bottom center;
+  // box-shadow: inset 0 -16px 16px -10px $colorBrown, 
+              // 0 16px 16px -10px $colorBrown;
 }
 
 #containerRootsImage {
-  box-shadow: 0 -16px 16px -10px $colorBrown;
+  // box-shadow: 0 -16px 16px -10px $colorBrown;
   position: absolute;
-  top: $headerHeight;
-  // top: calc(#{$headerHeight} - 20px);
+  // top: $headerHeight;
+  top: calc(#{$headerHeight} - 50px);
   left: 0;
   // height: $headerHeight;
   height: 580px;
@@ -74,16 +88,18 @@ body {
   z-index: -20;
 }
 #rootsImage {
-  position: relative;
-  top: -20px;
+  position: absolute;
+  width: 100%;
+  // top: -20px;
+  top: 0px;
   // NOTE: to move the root relative to the width of the whole image, modify <g id="rootG" transform="translate(MODIFY_THIS_X=480, y=-124.03913) 
   //right: 0px;
   //width: 100%;
   //height: calc(100% - 50px);
   height: 580px;
-  background-image: url(../img/rootsOnlyWeb.svg);
+  background-image: url(../img/rootsOnlyWeb.svg); //TODO: move $bgUnderground to it's own element to simplify bg-position
   background-repeat: no-repeat;
-  background-position: top right;
+  background-position: top center;
   background-size: cover;
   @media (min-aspect-ratio: 2/1) {
     background-size: 100%;
@@ -92,7 +108,7 @@ body {
 
 //*************************************** Page Title ***************************************
 #containerTitle{
-  position: absolute;
+  // position: absolute;
   // top: $navbarHeight;
 }
 #title {
@@ -170,7 +186,11 @@ body {
 #containerContent {
   position: relative;
   top: $headerHeight;
-  //background: transparent;
+  margin-top: 10px;
+}
+#intro {
+  // background-color: $colorLightGreen;
+  border-radius: 8px;
 }
 
 // svg {
