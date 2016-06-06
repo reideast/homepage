@@ -30,22 +30,27 @@ $socialLinksSize: 20px;
 $fontBrand: "Indie Flower", cursive;
 $fontMonospace: "Source Code Pro", monospace;
 $fontAdam: 'Adam CG Pro', sans-serif;
+$fontSerif: Georgia, 'Times New Roman', Times, serif;
+$fontSans: sans-serif;
+$fontBody: $fontSans;
 
 $colorWhiteGreen: #A9DA88;
-$colorTanSoil: #EBBD8A; //#C5A27D #BD915D
+$colorTanSoil: #F9D690; // #F9D690 == HSL (chrome dev tools: 40, 90%, 77%), original: #EBBD8A http://www.colorhexa.com/f9d690
+$colorTanSoilText: #565656;
+$colorText: $colorTanSoilText;
 
 @import 'adamcgpro';
 /* NOTE: Will need to use "Autoprefixer" */
 
 
 body {
-  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-family: $fontBody;
 /* From Bootstrap Jumbotron: */
 /* Move down content because we have a fixed navbar that is $navbarHeight tall */
   // padding-top: $navbarHeight;
   padding-bottom: 20px;
   
-  background-color: $colorWhiteGreen;
+  background-color: $colorTanSoil;
   color: $colorText;
 }
 
