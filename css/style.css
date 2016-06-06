@@ -10,12 +10,12 @@
 
 /* NOTE: Will need to use "Autoprefixer" */
 body {
-  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-family: sans-serif;
   /* From Bootstrap Jumbotron: */
   /* Move down content because we have a fixed navbar that is $navbarHeight tall */
   padding-bottom: 20px;
-  background-color: #A9DA88;
-  color: #0A0906; }
+  background-color: #F9D690;
+  color: #565656; }
 
 #containerHeaderImage {
   position: absolute;
