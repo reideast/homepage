@@ -7,6 +7,9 @@ $bgimage: "../img/shutterstock_centered.jpg";
 $bgimage: "../.ideas/stock-photo-young-plant-in-the-morning-light-174839018_crop.png";
 $bgUnderground: "../.ideas/stock-photo-young-plant-in-the-morning-light-174839018_crop_underground.png";
 
+$headerBGwide: "../img/center01_wide.jpg";
+$rootsBG: "../img/rootsCentered.svg";
+
 // $soilBrown: #403930;
 $soilBrown: #282923;
 $colorBrown: #0A0906;
@@ -61,7 +64,7 @@ body {
   // height: 100%;
   // width: 100%;
   // margin-top: $navbarHeight;
-  background-image: url($bgimage);
+  background-image: url($headerBGwide);
   background-repeat: no-repeat;
   // background-position: center right;
   // background-attachment: fixed;
@@ -97,7 +100,7 @@ body {
   //width: 100%;
   //height: calc(100% - 50px);
   height: 580px;
-  background-image: url(../img/rootsOnlyWeb.svg); //TODO: move $bgUnderground to it's own element to simplify bg-position
+  background-image: url($rootsBG); //TODO: move $bgUnderground to it's own element to simplify bg-position
   background-repeat: no-repeat;
   background-position: top center;
   background-size: cover;
