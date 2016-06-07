@@ -1,35 +1,19 @@
 /* Main CSS doc
-   By Andrew Reid East
-*/
+ * By Andrew Reid East */
 
-// $bgimage: "../img/23363119756_75389b2311_o_stretch.jpg";
-$bgimage: "../img/shutterstock_centered.jpg";
-$bgimage: "../.ideas/stock-photo-young-plant-in-the-morning-light-174839018_crop.png";
-$bgUnderground: "../.ideas/stock-photo-young-plant-in-the-morning-light-174839018_crop_underground.png";
 
 $headerBGwide: "../img/center01_wide.jpg";
 $headerBGmobile: "../img/center01_mobile.jpg";
 $rootsBG: "../img/rootsCentered.svg";
 
-// $soilBrown: #403930;
-$soilBrown: #282923;
-$colorBrown: #0A0906;
-// $colorBrown: #2f1e0e;
-// $colorBrown: #2f2318;
 $colorGreen: #34a814;
 $colorRed: #a81434;
 $colorBlue: #1434a8;
 $colorLightGreen: #92A270;
 $colorLightGreenBrighter: #9BB95B;
 
-$colorText: $colorBrown;
-
-$navbarHeight: 50px;
 $headerHeight: 100vh;
-$socialLinksSize: 20px;
-$fontBrand: "Indie Flower", cursive;
 $fontMonospace: "Source Code Pro", monospace;
-$fontAdam: 'Adam CG Pro', sans-serif;
 $fontSerif: Georgia, 'Times New Roman', Times, serif;
 $fontSans: sans-serif;
 $fontBody: $fontSans;
@@ -109,7 +93,7 @@ body {
 }
 #rootsImage {
   position: absolute;
-  width: 100vw;
+  width: 100%;
   height: 100vh;
   // top: -20px;
   top: 0px;
@@ -121,21 +105,21 @@ body {
   background-repeat: no-repeat;
   background-position: top center;
   // background-size: cover;
-  background-size: 30vw;
+  background-size: 30%;
   @media (max-width: 600px) {
-    background-size: 50vw;
+    background-size: 50%;
   }
   @media (max-width: 480px) {
-    background-size: 70vw;
+    background-size: 70%;
   }
   @media (max-width: 320px) {
-    background-size: 100vw;
+    background-size: 100%;
   }
   // @media (max-aspect-ratio: 7/8) {
-  //   background-size: 80vw;
+  //   background-size: 80%;
   // }
   // @media (max-aspect-ratio: 2/3) {
-  //   background-size: 100vw;
+  //   background-size: 100%;
   // }
 }
 
@@ -146,9 +130,9 @@ body {
 }
 #title {
   h1 {
-    font-family: $fontAdam;
+    // font-family: $fontAdam;
     // font-style: italic;
-    color: $colorBrown;
+    color: $colorText;
     font-size: 5em;
     line-height: 1.65;
     margin-top: 0;
@@ -156,63 +140,6 @@ body {
   
 }
 
-//*************************************** Navbar ***************************************
-//*************************************** "RE" Logo ***************************************
-.navbar-brand{
-  padding-top: 0;
-}
-.navbar-brand img {
-  height: $navbarHeight;
-  width: $navbarHeight;
-}
-#logoNavbar {
- font-size: 50px; 
-}
-.logoContainer {
-  font-family: $fontBrand;
-  position: relative;
-  line-height: 0.66;
-  //font-weight: bold;
-}
-.logoContainer div {
-  position: absolute;
-}
-.logoR {
-  top: 0.1em;
-  left: 0;
-}
-.logoE {
-  top: 0.35em;
-  left: 0.45em;
-}
-
-//*************************************** Navbar Social Icons ***************************************
-.socialUL {
-  margin-left: 0; /* setting li under this to inline-block adds margin-left/right: -15px. I do not know what part of Bootstrap is causing that */
-  margin-right: 0;
-}
-.socialUL li {
-  display:inline-block;
-}
-.socialLinks {
-  font-size: $socialLinksSize;
-}
-.socialLinks svg {
-  height: $socialLinksSize;
-  width: $socialLinksSize;
-  display: inline-block;
-  vertical-align: bottom;
-  border-radius: 20%;
-  fill: currentColor;
-}
-.socialLinks img {
-  height: $socialLinksSize;
-  width: $socialLinksSize;
-  display: inline-block;
-  vertical-align: bottom;
-  border-radius: 20%;
-  filter: grayscale(1) contrast(0.8);
-}
 
 
 //*************************************** Main Content ***************************************

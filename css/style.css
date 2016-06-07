@@ -1,6 +1,5 @@
 /* Main CSS doc
-   By Andrew Reid East
-*/
+ * By Andrew Reid East */
 @font-face {
   font-family: 'Adam CG Pro';
   src: url("adam.cg_pro-webfont.eot");
@@ -49,83 +48,28 @@ body {
 
 #rootsImage {
   position: absolute;
-  width: 100vw;
+  width: 100%;
   height: 100vh;
   top: 0px;
   background-image: url("../img/rootsCentered.svg");
   background-repeat: no-repeat;
   background-position: top center;
-  background-size: 30vw; }
+  background-size: 30%; }
   @media (max-width: 600px) {
     #rootsImage {
-      background-size: 50vw; } }
+      background-size: 50%; } }
   @media (max-width: 480px) {
     #rootsImage {
-      background-size: 70vw; } }
+      background-size: 70%; } }
   @media (max-width: 320px) {
     #rootsImage {
-      background-size: 100vw; } }
+      background-size: 100%; } }
 
 #title h1 {
-  font-family: "Adam CG Pro", sans-serif;
-  color: #0A0906;
+  color: #565656;
   font-size: 5em;
   line-height: 1.65;
   margin-top: 0; }
-
-.navbar-brand {
-  padding-top: 0; }
-
-.navbar-brand img {
-  height: 50px;
-  width: 50px; }
-
-#logoNavbar {
-  font-size: 50px; }
-
-.logoContainer {
-  font-family: "Indie Flower", cursive;
-  position: relative;
-  line-height: 0.66; }
-
-.logoContainer div {
-  position: absolute; }
-
-.logoR {
-  top: 0.1em;
-  left: 0; }
-
-.logoE {
-  top: 0.35em;
-  left: 0.45em; }
-
-.socialUL {
-  margin-left: 0;
-  /* setting li under this to inline-block adds margin-left/right: -15px. I do not know what part of Bootstrap is causing that */
-  margin-right: 0; }
-
-.socialUL li {
-  display: inline-block; }
-
-.socialLinks {
-  font-size: 20px; }
-
-.socialLinks svg {
-  height: 20px;
-  width: 20px;
-  display: inline-block;
-  vertical-align: bottom;
-  border-radius: 20%;
-  fill: currentColor; }
-
-.socialLinks img {
-  height: 20px;
-  width: 20px;
-  display: inline-block;
-  vertical-align: bottom;
-  border-radius: 20%;
-  -webkit-filter: grayscale(1) contrast(0.8);
-          filter: grayscale(1) contrast(0.8); }
 
 #containerContent {
   position: relative;
