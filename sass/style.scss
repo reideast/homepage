@@ -54,6 +54,11 @@ body {
   color: $colorText;
 }
 
+//TESTING:
+#containerTitle, #containerContent {
+  display: none;
+}
+
 //*************************************** Header Images ***************************************
 #containerHeaderImage {
   position: absolute;

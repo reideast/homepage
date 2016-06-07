@@ -17,6 +17,9 @@ body {
   background-color: #F9D690;
   color: #565656; }
 
+#containerTitle, #containerContent {
+  display: none; }
+
 #containerHeaderImage {
   position: absolute;
   top: 0;
