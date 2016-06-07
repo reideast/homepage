@@ -3,6 +3,7 @@
 
 
 $headerBGwide: "../img/center01_wide.jpg";
+$headerBGNoCrop: "../img/center01_full.jpg";
 $headerBGmobile: "../img/center01_mobile.jpg";
 $rootsBG: "../img/rootsCentered.svg";
 $fontSans: sans-serif;
@@ -46,15 +47,24 @@ body {
   position: relative;
   height: $headerHeight;
   background-repeat: no-repeat;
-  background-size: cover;
   background-position: bottom center;
   
   // box-shadow: inset 0 -16px 16px -10px $colorBrown, 
   //             0 16px 16px -10px $colorBrown;
   
-  background-image: url($headerBGwide);
+  // background-size: cover;
+  // background-image: url($headerBGwide);
+  
+  background-image: url($headerBGNoCrop);
+  @media (min-width: 1049px) {
+    background-size: cover;
+  }
+  @media (max-width: 1048px) {
+    background-size: 1200px;
+  }
   @media (max-width: 480px) {
     background-image: url($headerBGmobile);
+    background-size: cover;
   }
 }
 
