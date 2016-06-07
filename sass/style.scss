@@ -5,42 +5,32 @@
 $headerBGwide: "../img/center01_wide.jpg";
 $headerBGmobile: "../img/center01_mobile.jpg";
 $rootsBG: "../img/rootsCentered.svg";
-
-$colorGreen: #34a814;
-$colorRed: #a81434;
-$colorBlue: #1434a8;
-$colorLightGreen: #92A270;
-$colorLightGreenBrighter: #9BB95B;
-
-$headerHeight: 100vh;
-$fontMonospace: "Source Code Pro", monospace;
-$fontSerif: Georgia, 'Times New Roman', Times, serif;
 $fontSans: sans-serif;
 $fontBody: $fontSans;
 
-$colorWhiteGreen: #A9DA88;
 $colorTanSoil: #F9D690; // #F9D690 == HSL (chrome dev tools: 40, 90%, 77%), original: #EBBD8A http://www.colorhexa.com/f9d690
 $colorTanSoilText: #565656;
 $colorText: $colorTanSoilText;
+$headerHeight: 100vh;
 
-@import 'adamcgpro';
-/* NOTE: Will need to use "Autoprefixer" */
+// $colorLightGreen: #92A270;
+// $colorLightGreenBrighter: #9BB95B;
+// $fontMonospace: "Source Code Pro", monospace;
+// $fontSerif: Georgia, 'Times New Roman', Times, serif;
 
+// $colorWhiteGreen: #A9DA88;
 
-body {
-  font-family: $fontBody;
-/* From Bootstrap Jumbotron: */
-/* Move down content because we have a fixed navbar that is $navbarHeight tall */
-  // padding-top: $navbarHeight;
-  padding-bottom: 20px;
-  
-  background-color: $colorTanSoil;
-  color: $colorText;
-}
+// @import 'adamcgpro';
 
 //TESTING:
 #containerTitle, #containerContent {
   display: none;
+}
+
+body {
+  font-family: $fontBody;
+  background-color: $colorTanSoil;
+  color: $colorText;
 }
 
 //*************************************** Header Images ***************************************
@@ -54,40 +44,27 @@ body {
 }
 #headerImage {
   position: relative;
-  // top: $navbarHeight;
-  // height: calc(100% - 50px);
-  height: 100vh;
-  // height: 100%;
-  // width: 100%;
-  // margin-top: $navbarHeight;
-  background-image: url($headerBGwide);
+  height: $headerHeight;
   background-repeat: no-repeat;
-  // background-position: center right;
-  // background-attachment: fixed;
-  // background-size: cover;
   background-size: cover;
-  // @media (min-aspect-ratio: 2/1) {
-  //   background-size: 100%;
-  // }
-  
   background-position: bottom center;
+  
   // box-shadow: inset 0 -16px 16px -10px $colorBrown, 
   //             0 16px 16px -10px $colorBrown;
   
+  background-image: url($headerBGwide);
   @media (max-width: 480px) {
     background-image: url($headerBGmobile);
-    // background-size: contain;
   }
 }
 
 #containerRootsImage {
   // box-shadow: 0 -16px 16px -10px $colorBrown;
   position: absolute;
-  // top: $headerHeight;
   top: calc(#{$headerHeight} - 50px);
   left: 0;
-  // height: $headerHeight;
-  height: 580px;
+  height: $headerHeight;
+  // height: 580px;
   width: 100%;
   z-index: -20;
 }
@@ -95,16 +72,11 @@ body {
   position: absolute;
   width: 100%;
   height: 100vh;
-  // top: -20px;
   top: 0px;
-  // NOTE: to move the root relative to the width of the whole image, modify <g id="rootG" transform="translate(MODIFY_THIS_X=480, y=-124.03913) 
-  //right: 0px;
-  //width: 100%;
-  //height: calc(100% - 50px);
-  background-image: url($rootsBG); //TODO: move $bgUnderground to it's own element to simplify bg-position
   background-repeat: no-repeat;
   background-position: top center;
-  // background-size: cover;
+
+  background-image: url($rootsBG); //TODO: move $bgUnderground to it's own element to simplify bg-position
   background-size: 30%;
   @media (max-width: 600px) {
     background-size: 50%;
@@ -115,32 +87,22 @@ body {
   @media (max-width: 320px) {
     background-size: 100%;
   }
-  // @media (max-aspect-ratio: 7/8) {
-  //   background-size: 80%;
-  // }
-  // @media (max-aspect-ratio: 2/3) {
-  //   background-size: 100%;
-  // }
 }
 
 //*************************************** Page Title ***************************************
 #containerTitle{
   // position: absolute;
+  position: initial;
   // top: $navbarHeight;
 }
 #title {
   h1 {
     // font-family: $fontAdam;
-    // font-style: italic;
-    color: $colorText;
     font-size: 5em;
     line-height: 1.65;
     margin-top: 0;
   }
-  
 }
-
-
 
 //*************************************** Main Content ***************************************
 #containerContent {
@@ -153,11 +115,11 @@ body {
   border-radius: 8px;
 }
 
+// .button-img {
+// 	height: 1.3em;
+//   width: 1.3em;
+// 	display: inline-block;
+// }
 // svg {
 //   fill: currentColor;
 //}
-.button-img {
-	height: 1.3em;
-  width: 1.3em;
-	display: inline-block;
-}
