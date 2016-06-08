@@ -12,9 +12,12 @@ body {
   position: absolute;
   top: 0;
   left: 0;
-  height: 100vh;
-  width: 100%;
-  z-index: -10; }
+  height: calc(100vh - 100vh);
+  width: calc(100% - 2 * 40px);
+  z-index: -10;
+  margin-top: 40px;
+  margin-left: 40px;
+  margin-right: 40px; }
 
 #headerImage {
   position: relative;
