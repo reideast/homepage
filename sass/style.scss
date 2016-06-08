@@ -7,6 +7,7 @@ $headerBGNoCrop: "../img/center01_full.jpg";
 $headerBGmobile: "../img/center01_mobile.jpg";
 $rootsBG: "../img/rootsCentered.svg";
 $fontSans: sans-serif;
+$fontSerif: Georgia, 'Times New Roman', Times, serif;
 $fontBody: $fontSans;
 
 $colorTanSoil: #F9D690; // #F9D690 == HSL (chrome dev tools: 40, 90%, 77%), original: #EBBD8A http://www.colorhexa.com/f9d690
@@ -14,25 +15,23 @@ $colorTanSoilText: #565656;
 $colorText: $colorTanSoilText;
 $headerHeight: 100vh;
 
-$fullPageMargin: 40px;
-
 // $colorLightGreen: #92A270;
 // $colorLightGreenBrighter: #9BB95B;
 // $fontMonospace: "Source Code Pro", monospace;
-// $fontSerif: Georgia, 'Times New Roman', Times, serif;
 
 // $colorWhiteGreen: #A9DA88;
 
 // @import 'adamcgpro';
 
 //TESTING:
-#containerTitle, #containerContent {
+#containerContent {
   display: none;
 }
 
 body {
   font-family: $fontBody;
-  background-color: $colorTanSoil;
+  // background-color: $colorTanSoil;
+  background-color: white;
   color: $colorText;
 }
 
@@ -41,13 +40,9 @@ body {
   position: absolute;
   top: 0;
   left: 0;
-  height: calc(100vh - #{$headerHeight});
-  width: calc(100% - 2 * #{$fullPageMargin});
+  height: 100vh;
+  width: 100%;
   z-index: -10;
-
-  margin-top: $fullPageMargin;
-  margin-left: $fullPageMargin;
-  margin-right: $fullPageMargin;
 }
 #headerImage {
   position: relative;
@@ -107,15 +102,20 @@ body {
 
 //*************************************** Page Title ***************************************
 #containerTitle{
-  // position: absolute;
-  position: initial;
-  // top: $navbarHeight;
+  position: absolute;
+  top: calc(#{$headerHeight} / 2);
+  transform: translateY(-50%);
+  z-index: 10;
+  width: 100%;
 }
 #title {
   h1 {
-    // font-family: $fontAdam;
-    font-size: 5em;
-    line-height: 1.65;
+    // font-family: Vollkorn;
+    font-family: "Playfair Display";
+    color: white;
+    text-align: center;
+    font-size: 9em;
+    line-height: 1.1;
     margin-top: 0;
   }
 }

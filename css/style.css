@@ -1,23 +1,20 @@
 /* Main CSS doc
  * By Andrew Reid East */
-#containerTitle, #containerContent {
+#containerContent {
   display: none; }
 
 body {
   font-family: sans-serif;
-  background-color: #F9D690;
+  background-color: white;
   color: #565656; }
 
 #containerHeaderImage {
   position: absolute;
   top: 0;
   left: 0;
-  height: calc(100vh - 100vh);
-  width: calc(100% - 2 * 40px);
-  z-index: -10;
-  margin-top: 40px;
-  margin-left: 40px;
-  margin-right: 40px; }
+  height: 100vh;
+  width: 100%;
+  z-index: -10; }
 
 #headerImage {
   position: relative;
@@ -64,11 +61,19 @@ body {
       background-size: 100%; } }
 
 #containerTitle {
-  position: initial; }
+  position: absolute;
+  top: calc(100vh / 2);
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  z-index: 10;
+  width: 100%; }
 
 #title h1 {
-  font-size: 5em;
-  line-height: 1.65;
+  font-family: "Playfair Display";
+  color: white;
+  text-align: center;
+  font-size: 9em;
+  line-height: 1.1;
   margin-top: 0; }
 
 #containerContent {
