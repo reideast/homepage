@@ -2,9 +2,12 @@
  * By Andrew Reid East */
 
 
-$headerBGwide: "../img/center01_wide.jpg";
-$headerBGNoCrop: "../img/center01_full.jpg";
+// $headerBGwide: "../img/center01_wide.jpg";
+// $headerBGNoCrop: "../img/center01_full.jpg";
 $headerBGmobile: "../img/center01_mobile.jpg";
+$headerBGTop: "../img/center01_top.jpg";
+$headerBGBase: "../img/center01_base.jpg";
+$headerBGBaseFade: "../img/center01_base_fade.png";
 $rootsBG: "../img/rootsCentered.svg";
 $fontSans: sans-serif;
 $fontSerif: Georgia, 'Times New Roman', Times, serif;
@@ -14,6 +17,7 @@ $colorTanSoil: #F9D690; // #F9D690 == HSL (chrome dev tools: 40, 90%, 77%), orig
 $colorTanSoilText: #565656;
 $colorText: $colorTanSoilText;
 $headerHeight: 100vh;
+$headerBaseHeight: 144px;
 
 // $colorLightGreen: #92A270;
 // $colorLightGreenBrighter: #9BB95B;
@@ -45,26 +49,37 @@ body {
   z-index: -10;
 }
 #headerImage {
-  position: relative;
   height: $headerHeight;
-  background-repeat: no-repeat;
-  background-position: bottom center;
-  
-  // box-shadow: inset 0 -16px 16px -10px $colorBrown, 
-  //             0 16px 16px -10px $colorBrown;
-  
-  // background-size: cover;
-  // background-image: url($headerBGwide);
-  
-  background-image: url($headerBGNoCrop);
-  @media (min-width: 1049px) {
+  background-image: url($headerBGTop);
+  @media (max-width: 480px) {
+    background-image: url($headerBGmobile);
     background-size: cover;
   }
   @media (max-width: 1048px) {
     background-size: 1200px;
   }
-  @media (max-width: 480px) {
-    background-image: url($headerBGmobile);
+}
+#headerBaseImage {
+  height: $headerBaseHeight;
+  background-image: url($headerBGBase);
+  @media (max-width: 1048px) {
+    background-size: 2220px $headerBaseHeight;
+  }
+} 
+#headerImage, #headerBaseImage {
+  position: relative;
+  background-repeat: no-repeat;
+  background-position: bottom center;
+
+  //TODO: used center02_top.jpg, center02_base/fade.png to sync aspect ratios for cover/absolute sized bg
+  
+  // TODO: transition to roots: bottom 50px of headerImage fades out via JS as windows scrolls, revealing roots image
+  // TODO: 50px area faded out reveals nav bar?
+
+  // box-shadow: inset 0 -16px 16px -10px $colorBrown, 
+  //             0 16px 16px -10px $colorBrown;
+  
+  @media (min-width: 1049px) {
     background-size: cover;
   }
 }
@@ -72,7 +87,8 @@ body {
 #containerRootsImage {
   // box-shadow: 0 -16px 16px -10px $colorBrown;
   position: absolute;
-  top: calc(#{$headerHeight} - 50px);
+  // top: calc(#{$headerHeight} - #{$headerBaseHeight});
+  top: $headerHeight;
   left: 0;
   height: $headerHeight;
   // height: 580px;

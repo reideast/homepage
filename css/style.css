@@ -17,25 +17,34 @@ body {
   z-index: -10; }
 
 #headerImage {
-  position: relative;
   height: 100vh;
-  background-repeat: no-repeat;
-  background-position: bottom center;
-  background-image: url("../img/center01_full.jpg"); }
-  @media (min-width: 1049px) {
-    #headerImage {
-      background-size: cover; } }
-  @media (max-width: 1048px) {
-    #headerImage {
-      background-size: 1200px; } }
+  background-image: url("../img/center01_top.jpg"); }
   @media (max-width: 480px) {
     #headerImage {
       background-image: url("../img/center01_mobile.jpg");
       background-size: cover; } }
+  @media (max-width: 1048px) {
+    #headerImage {
+      background-size: 1200px; } }
+
+#headerBaseImage {
+  height: 144px;
+  background-image: url("../img/center01_base.jpg"); }
+  @media (max-width: 1048px) {
+    #headerBaseImage {
+      background-size: 2220px 144px; } }
+
+#headerImage, #headerBaseImage {
+  position: relative;
+  background-repeat: no-repeat;
+  background-position: bottom center; }
+  @media (min-width: 1049px) {
+    #headerImage, #headerBaseImage {
+      background-size: cover; } }
 
 #containerRootsImage {
   position: absolute;
-  top: calc(100vh - 50px);
+  top: 100vh;
   left: 0;
   height: 100vh;
   width: 100%;
