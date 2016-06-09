@@ -5,9 +5,9 @@
 // $headerBGwide: "../img/center01_wide.jpg";
 // $headerBGNoCrop: "../img/center01_full.jpg";
 $headerBGmobile: "../img/center01_mobile.jpg";
-$headerBGTop: "../img/center01_top.jpg";
-$headerBGBase: "../img/center01_base.jpg";
-$headerBGBaseFade: "../img/center01_base_fade.png";
+$headerBGTop: "../img/center02_top.jpg";
+$headerBGBase: "../img/center02_base2.png";
+$headerBGBaseFade: "../img/center02_base_fade3.png";
 $rootsBG: "../img/rootsCentered.svg";
 $fontSans: sans-serif;
 $fontSerif: Georgia, 'Times New Roman', Times, serif;
@@ -17,7 +17,9 @@ $colorTanSoil: #F9D690; // #F9D690 == HSL (chrome dev tools: 40, 90%, 77%), orig
 $colorTanSoilText: #565656;
 $colorText: $colorTanSoilText;
 $headerHeight: 100vh;
-$headerBaseHeight: 144px;
+// $headerBaseHeight: 144px;
+// $headerBaseHeight: 10.84vh;
+$headerBaseHeight: 12vh;
 
 // $colorLightGreen: #92A270;
 // $colorLightGreenBrighter: #9BB95B;
@@ -44,30 +46,16 @@ body {
   position: absolute;
   top: 0;
   left: 0;
-  height: 100vh;
+  height: calc(#{$headerHeight} + #{$headerBaseHeight});
   width: 100%;
-  z-index: -10;
+  // z-index: -10;
 }
-#headerImage {
-  height: $headerHeight;
-  background-image: url($headerBGTop);
-  @media (max-width: 480px) {
-    background-image: url($headerBGmobile);
-    background-size: cover;
-  }
-  @media (max-width: 1048px) {
-    background-size: 1200px;
-  }
-}
-#headerBaseImage {
-  height: $headerBaseHeight;
-  background-image: url($headerBGBase);
-  @media (max-width: 1048px) {
-    background-size: 2220px $headerBaseHeight;
-  }
-} 
-#headerImage, #headerBaseImage {
-  position: relative;
+#headerImage, #headerBaseImage, #headerBaseImageFade {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: calc(#{$headerHeight} + #{$headerBaseHeight});
+  width: 100%;
   background-repeat: no-repeat;
   background-position: bottom center;
 
@@ -82,6 +70,26 @@ body {
   @media (min-width: 1049px) {
     background-size: cover;
   }
+  @media (max-width: 1048px) {
+    background-size: 1200px;
+  }
+}
+#headerImage {
+  background-image: url($headerBGTop);
+  @media (max-width: 480px) {
+    background-image: url($headerBGmobile);
+    background-size: cover;
+  }
+  z-index: -30;
+}
+#headerBaseImage {
+  background-image: url($headerBGBase);
+  // top: -2px; // TODO: fix seam between images. is this an artifact of the photo editing? (note: shows in FF and Ch)
+  z-index: -10
+}
+#headerBaseImageFade {
+  background-image: url($headerBGBaseFade);
+  z-index: -10;
 }
 
 #containerRootsImage {
@@ -90,7 +98,7 @@ body {
   // top: calc(#{$headerHeight} - #{$headerBaseHeight});
   top: $headerHeight;
   left: 0;
-  height: $headerHeight;
+  height: $headerHeight * 2;
   // height: 580px;
   width: 100%;
   z-index: -20;
@@ -98,7 +106,7 @@ body {
 #rootsImage {
   position: absolute;
   width: 100%;
-  height: 100vh;
+  height: 100vh * 2;
   top: 0px;
   background-repeat: no-repeat;
   background-position: top center;
@@ -131,6 +139,7 @@ body {
     color: white;
     text-align: center;
     font-size: 9em;
+    //TODO: media query for ultra-high-res to increse font-size by em
     line-height: 1.1;
     margin-top: 0;
   }
