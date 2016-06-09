@@ -6,13 +6,14 @@
 // $headerBGNoCrop: "../img/center01_full.jpg";
 $headerBGmobile: "../img/center01_mobile.jpg";
 $headerBGTop: "../img/center02_top.jpg";
-$headerBGBase: "../img/center02_base2.png";
+$headerBGBase: "../img/center02_base3.png";
 $headerBGBaseFade: "../img/center02_base_fade3.png";
 $rootsBG: "../img/rootsCentered.svg";
 $fontSans: sans-serif;
 $fontSerif: Georgia, 'Times New Roman', Times, serif;
 $fontBody: $fontSans;
 
+$colorDarkSoil: #2A1704;
 $colorTanSoil: #F9D690; // #F9D690 == HSL (chrome dev tools: 40, 90%, 77%), original: #EBBD8A http://www.colorhexa.com/f9d690
 $colorTanSoilText: #565656;
 $colorText: $colorTanSoilText;
@@ -84,11 +85,14 @@ body {
 }
 #headerBaseImage {
   background-image: url($headerBGBase);
-  // top: -2px; // TODO: fix seam between images. is this an artifact of the photo editing? (note: shows in FF and Ch)
+  // top: -1px; // TODO: fix seam between images. is this an artifact of the photo editing? (note: shows in FF and Ch)
+  top: 0;
   z-index: -10
 }
 #headerBaseImageFade {
   background-image: url($headerBGBaseFade);
+  // top: -1px; // TODO: fix seam between images. is this an artifact of the photo editing? (note: shows in FF and Ch)
+  top: 0;
   z-index: -10;
 }
 
@@ -101,13 +105,15 @@ body {
   height: $headerHeight * 2;
   // height: 580px;
   width: 100%;
-  z-index: -20;
 }
-#rootsImage {
+#rootsImage, #rootsImageSoil {
   position: absolute;
   width: 100%;
   height: 100vh * 2;
   top: 0px;
+}
+#rootsImage {
+  z-index: -20;
   background-repeat: no-repeat;
   background-position: top center;
 
@@ -122,6 +128,10 @@ body {
   @media (max-width: 320px) {
     background-size: 100%;
   }
+}
+#rootsImageSoil {
+  z-index: -19;
+  background-color: $colorDarkSoil;
 }
 
 //*************************************** Page Title ***************************************
