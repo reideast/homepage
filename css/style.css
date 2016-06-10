@@ -1,26 +1,17 @@
 /* Main CSS doc
  * By Andrew Reid East */
-#containerContent {
-  display: none; }
-
 body {
   font-family: sans-serif;
   background-color: white;
-  color: #565656; }
+  color: black; }
 
-#containerHeaderImage {
+.container-background {
   position: absolute;
-  top: 0;
   left: 0;
-  height: calc(100vh + 12vh);
   width: 100%; }
 
 #headerImage, #headerBaseImage, #headerBaseImageFade {
-  position: absolute;
-  top: 0;
-  left: 0;
   height: calc(100vh + 12vh);
-  width: 100%;
   background-repeat: no-repeat;
   background-position: bottom center; }
   @media (min-width: 1049px) {
@@ -31,41 +22,37 @@ body {
       background-size: 1200px; } }
 
 #headerImage {
-  background-image: url("../img/center02_top.jpg");
-  z-index: -30; }
+  z-index: -30;
+  background-image: url("../img/center02_top.jpg"); }
   @media (max-width: 480px) {
     #headerImage {
       background-image: url("../img/center01_mobile.jpg");
       background-size: cover; } }
 
 #headerBaseImage {
-  background-image: url("../img/center02_base3.png");
-  top: 0;
-  z-index: -10; }
+  z-index: -10;
+  background-image: url("../img/center02_base3.png"); }
 
 #headerBaseImageFade {
   background-image: url("../img/center02_base_fade3.png");
-  top: 0;
   z-index: -10; }
 
 #containerRootsImage {
-  position: absolute;
   top: 100vh;
-  left: 0;
-  height: 200vh;
-  width: 100%; }
+  height: 200vh; }
 
 #rootsImage, #rootsImageSoil {
-  position: absolute;
-  width: 100%;
-  height: 200vh;
-  top: 0px; }
+  height: 200vh; }
+
+#rootsImageSoil {
+  z-index: -19;
+  background-color: #2A1704; }
 
 #rootsImage {
   z-index: -20;
+  background-image: url("../img/rootsCentered.svg");
   background-repeat: no-repeat;
   background-position: top center;
-  background-image: url("../img/rootsCentered.svg");
   background-size: 30%; }
   @media (max-width: 600px) {
     #rootsImage {
@@ -77,17 +64,13 @@ body {
     #rootsImage {
       background-size: 100%; } }
 
-#rootsImageSoil {
-  z-index: -19;
-  background-color: #2A1704; }
-
 #containerTitle {
   position: absolute;
+  z-index: 10;
+  width: 100%;
   top: calc(100vh / 2);
   -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
-  z-index: 10;
-  width: 100%; }
+          transform: translateY(-50%); }
 
 #title h1 {
   font-family: "Playfair Display SC";
@@ -98,9 +81,5 @@ body {
   margin-top: 0; }
 
 #containerContent {
-  position: relative;
-  top: 100vh;
-  margin-top: 10px; }
-
-#intro {
-  border-radius: 8px; }
+  position: absolute;
+  top: 100vh; }

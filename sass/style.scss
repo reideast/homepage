@@ -1,73 +1,57 @@
 /* Main CSS doc
  * By Andrew Reid East */
 
-
-// $headerBGwide: "../img/center01_wide.jpg";
-// $headerBGNoCrop: "../img/center01_full.jpg";
 $headerBGmobile: "../img/center01_mobile.jpg";
 $headerBGTop: "../img/center02_top.jpg";
 $headerBGBase: "../img/center02_base3.png";
 $headerBGBaseFade: "../img/center02_base_fade3.png";
 $rootsBG: "../img/rootsCentered.svg";
+
 $fontSans: sans-serif;
 $fontSerif: Georgia, 'Times New Roman', Times, serif;
 $fontBody: $fontSans;
+$fontTitle: "Playfair Display SC";
 
 $colorDarkSoil: #2A1704;
 $colorTanSoil: #F9D690; // #F9D690 == HSL (chrome dev tools: 40, 90%, 77%), original: #EBBD8A http://www.colorhexa.com/f9d690
-$colorTanSoilText: #565656;
-$colorText: $colorTanSoilText;
+// $colorTanSoilText: #565656;
+// $colorText: $colorTanSoilText;
+$colorText: black;
+$colorBG: white;
 $headerHeight: 100vh;
 // $headerBaseHeight: 144px;
-// $headerBaseHeight: 10.84vh;
+// $headerBaseHeight: 10.84vh; // calculated from ratios
 $headerBaseHeight: 12vh;
 
 // $colorLightGreen: #92A270;
 // $colorLightGreenBrighter: #9BB95B;
-// $fontMonospace: "Source Code Pro", monospace;
-
 // $colorWhiteGreen: #A9DA88;
-
-// @import 'adamcgpro';
-
-//TESTING:
-#containerContent {
-  display: none;
-}
+// $fontMonospace: "Source Code Pro", monospace;
 
 body {
   font-family: $fontBody;
   // background-color: $colorTanSoil;
-  background-color: white;
+  background-color: $colorBG;
   color: $colorText;
 }
 
 //*************************************** Header Images ***************************************
-#containerHeaderImage {
+.container-background {
   position: absolute;
-  top: 0;
   left: 0;
-  height: calc(#{$headerHeight} + #{$headerBaseHeight});
   width: 100%;
-  // z-index: -10;
 }
+// #containerHeaderImage {
+//   height: calc(#{$headerHeight} + #{$headerBaseHeight});
+// }
 #headerImage, #headerBaseImage, #headerBaseImageFade {
-  position: absolute;
-  top: 0;
-  left: 0;
+  // TODO: 50px area faded out reveals nav bar?
+
   height: calc(#{$headerHeight} + #{$headerBaseHeight});
-  width: 100%;
   background-repeat: no-repeat;
   background-position: bottom center;
 
-  //TODO: used center02_top.jpg, center02_base/fade.png to sync aspect ratios for cover/absolute sized bg
-  
-  // TODO: transition to roots: bottom 50px of headerImage fades out via JS as windows scrolls, revealing roots image
-  // TODO: 50px area faded out reveals nav bar?
 
-  // box-shadow: inset 0 -16px 16px -10px $colorBrown, 
-  //             0 16px 16px -10px $colorBrown;
-  
   @media (min-width: 1049px) {
     background-size: cover;
   }
@@ -76,48 +60,41 @@ body {
   }
 }
 #headerImage {
+  z-index: -30;
   background-image: url($headerBGTop);
   @media (max-width: 480px) {
     background-image: url($headerBGmobile);
     background-size: cover;
   }
-  z-index: -30;
 }
 #headerBaseImage {
+  z-index: -10;
   background-image: url($headerBGBase);
   // top: -1px; // TODO: fix seam between images. is this an artifact of the photo editing? (note: shows in FF and Ch)
-  top: 0;
-  z-index: -10
 }
 #headerBaseImageFade {
   background-image: url($headerBGBaseFade);
   // top: -1px; // TODO: fix seam between images. is this an artifact of the photo editing? (note: shows in FF and Ch)
-  top: 0;
   z-index: -10;
 }
 
 #containerRootsImage {
-  // box-shadow: 0 -16px 16px -10px $colorBrown;
-  position: absolute;
-  // top: calc(#{$headerHeight} - #{$headerBaseHeight});
   top: $headerHeight;
-  left: 0;
-  height: $headerHeight * 2;
-  // height: 580px;
-  width: 100%;
+  height: $headerHeight * 2; // TODO: set actual height
 }
 #rootsImage, #rootsImageSoil {
-  position: absolute;
-  width: 100%;
-  height: 100vh * 2;
-  top: 0px;
+  height: $headerHeight * 2;
+}
+#rootsImageSoil {
+  z-index: -19;
+  background-color: $colorDarkSoil;
 }
 #rootsImage {
   z-index: -20;
+  background-image: url($rootsBG); //TODO: move $bgUnderground to it's own element to simplify bg-position
   background-repeat: no-repeat;
   background-position: top center;
 
-  background-image: url($rootsBG); //TODO: move $bgUnderground to it's own element to simplify bg-position
   background-size: 30%;
   @media (max-width: 600px) {
     background-size: 50%;
@@ -129,41 +106,30 @@ body {
     background-size: 100%;
   }
 }
-#rootsImageSoil {
-  z-index: -19;
-  background-color: $colorDarkSoil;
-}
 
 //*************************************** Page Title ***************************************
 #containerTitle{
   position: absolute;
-  top: calc(#{$headerHeight} / 2);
-  transform: translateY(-50%);
   z-index: 10;
   width: 100%;
+  top: calc(#{$headerHeight} / 2);
+  transform: translateY(-50%);
 }
-#title {
-  h1 {
-    // font-family: Vollkorn;
-    font-family: "Playfair Display SC";
-    color: white;
-    text-align: center;
-    font-size: 9em;
-    //TODO: media query for ultra-high-res to increse font-size by em
-    line-height: 1.1;
-    margin-top: 0;
-  }
+#title h1 {
+  // font-family: Vollkorn;
+  font-family: $fontTitle; 
+  color: white;
+  text-align: center;
+  font-size: 9em;
+  //TODO: media query for ultra-high-res to increse font-size by em
+  line-height: 1.1;
+  margin-top: 0;
 }
 
 //*************************************** Main Content ***************************************
 #containerContent {
-  position: relative;
+  position: absolute;
   top: $headerHeight;
-  margin-top: 10px;
-}
-#intro {
-  // background-color: $colorLightGreen;
-  border-radius: 8px;
 }
 
 // .button-img {
@@ -171,6 +137,7 @@ body {
 //   width: 1.3em;
 // 	display: inline-block;
 // }
+
 // svg {
 //   fill: currentColor;
 //}
