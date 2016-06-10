@@ -1,9 +1,13 @@
 /* Main CSS doc
  * By Andrew Reid East */
 body {
-  font-family: sans-serif;
+  font-family: "Playfair Display", Georgia, "Times New Roman", Times, serif;
   background-color: white;
-  color: black; }
+  color: black;
+  font-size: 18px; }
+
+h1, h2, h3, h4 {
+  font-family: "Playfair Display SC", serif; }
 
 .container-background {
   position: absolute;
@@ -73,13 +77,16 @@ body {
           transform: translateY(-50%); }
 
 #title h1 {
-  font-family: "Playfair Display SC";
   color: white;
   text-align: center;
   font-size: 9em;
   line-height: 1.1;
   margin-top: 0; }
 
-#containerContent {
+#about {
   position: absolute;
-  top: 100vh; }
+  top: 100vh;
+  margin-top: 100px; }
+
+.text-box {
+  padding: 20px; }
