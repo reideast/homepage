@@ -72,6 +72,7 @@ h1, h2, h3, h4 {
   }
 }
 #headerBaseImage {
+  display: none;
   z-index: -10;
   background-image: url($headerBGBase);
   // top: -1px; // TODO: fix seam between images. is this an artifact of the photo editing? (note: shows in FF and Ch)
@@ -90,6 +91,7 @@ h1, h2, h3, h4 {
   height: $headerHeight * 2;
 }
 #rootsImageSoil {
+  display: none;
   z-index: -19;
   background-color: $colorDarkSoil;
 }
@@ -149,3 +151,7 @@ h1, h2, h3, h4 {
 // svg {
 //   fill: currentColor;
 //}
+
+footer {
+  position: absolute;
+}

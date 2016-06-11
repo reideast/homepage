@@ -8,8 +8,10 @@ $(document).ready(function () {
     // }
     //chgColor();
 
-    $("#headerBaseImage").show();
-    $("#rootsImageSoil").show();
+    if ($(window).scrollTop() < 80) {
+        $("#headerBaseImage").show();
+        $("#rootsImageSoil").show();
+    }
 
     var aboutTop = Array(3);
     $("#about div.text-box").each(function (i) {
@@ -24,7 +26,7 @@ $(document).ready(function () {
         console.log("about" + i + ".offsetTop=" + this.offsetTop);
         console.log("about" + i + ".offsetTop=" + document.getElementById("about" + i).offsetTop);
         console.log("aboutTop[" + i + "]=" + aboutTop[i]);
-        // TODO: change aboutTop array to store "this" so the .offsetTop prop can be accessed later
+        // TODO: change aboutTop array to store "this" so the .offsetTop prop can be accessed later 
     });
     // $("#about1, #about2, #about3").hide();
 
@@ -43,23 +45,21 @@ $(document).ready(function () {
         
         
         if (top > 80) {
-            // console.log("fadeOut");
             $("#headerBaseImage").fadeOut(1000);
             $("#rootsImageSoil").fadeOut(1000);
         } else {
-            // console.log("fadeIn");
             $("#headerBaseImage").fadeIn(200);
             $("#rootsImageSoil").fadeIn(200);
-            $("#about1, #about2, #about3").hide();
+            $("#about0, #about1, #about2").hide();
         }
 
-        if (top > 400) {
+        if (top > 300) {
             $("#about0").slideDown(1000);
         }
-        if (top > 550) {
+        if (top > 450) {
             $("#about1").slideDown(1000);
        }
-        if (top > 700) {
+        if (top > 600) {
             $("#about2").slideDown(1000);
         } 
     
