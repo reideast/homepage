@@ -9,11 +9,11 @@
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    version="1.1"
    id="svg6073"
-   viewBox="0 0 148.52761 939.38972"
+   viewBox="0 0 153.47853 942.715"
    height="1130"
-   width="600"
+   width="620"
    inkscape:version="0.91 r13725"
-   sodipodi:docname="rootsCentered.svg"
+   sodipodi:docname="rootsCentered.svg.2016_06_12_18_59_26.0.svg"
    inkscape:export-filename="C:\Users\Corypheus\Dropbox\Web Design\Andrew Web\img\rootsCentered.png"
    inkscape:export-xdpi="90"
    inkscape:export-ydpi="90">
@@ -34,9 +34,9 @@
      fit-margin-left="0"
      fit-margin-right="0"
      fit-margin-bottom="0"
-     inkscape:zoom="0.47999089"
-     inkscape:cx="300"
-     inkscape:cy="558.34393"
+     inkscape:zoom="0.47433628"
+     inkscape:cx="310"
+     inkscape:cy="565"
      inkscape:window-x="-8"
      inkscape:window-y="-8"
      inkscape:window-maximized="1"
@@ -45,7 +45,7 @@
        type="xygrid"
        id="grid4325"
        originx="-314.65208"
-       originy="60.426736" />
+       originy="60.426726" />
   </sodipodi:namedview>
   <defs
      id="defs6075" />
@@ -57,7 +57,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
         <cc:license
            rdf:resource="http://creativecommons.org/licenses/by-nc/3.0/" />
       </cc:Work>
