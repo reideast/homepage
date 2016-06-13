@@ -34,18 +34,26 @@
      fit-margin-left="0"
      fit-margin-right="0"
      fit-margin-bottom="0"
-     inkscape:zoom="0.7425"
-     inkscape:cx="190.34417"
-     inkscape:cy="685.16064"
+     inkscape:zoom="1.8973451"
+     inkscape:cx="290.87624"
+     inkscape:cy="1070.9619"
      inkscape:window-x="-8"
      inkscape:window-y="-8"
      inkscape:window-maximized="1"
-     inkscape:current-layer="svg6073">
+     inkscape:current-layer="svg6073"
+     showguides="true"
+     inkscape:guide-bbox="true">
     <inkscape:grid
        type="xygrid"
        id="grid4325"
        originx="-314.65208"
        originy="60.426736" />
+    <sodipodi:guide
+       position="74.263805,939.38972"
+       orientation="1,0"
+       id="guide4327"
+       inkscape:label="center"
+       inkscape:color="rgb(0,0,255)" />
   </sodipodi:namedview>
   <defs
      id="defs6075" />
@@ -57,7 +65,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title />
+        <dc:title></dc:title>
         <cc:license
            rdf:resource="http://creativecommons.org/licenses/by-nc/3.0/" />
       </cc:Work>
@@ -79,7 +87,7 @@
     </rdf:RDF>
   </metadata>
   <g
-     transform="translate(-152.36458,-124.03913)"
+     transform="translate(-126.51384,-124.03913)"
      id="rootG">
     <g
        transform="translate(-100.16877,55.838445)"

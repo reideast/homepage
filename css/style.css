@@ -18,28 +18,24 @@ h1, h2, h3, h4 {
   height: calc(100vh + 12vh);
   background-repeat: no-repeat;
   background-position: bottom center; }
-  @media (min-width: 1049px) {
+  @media (min-width: 1201px) {
     #headerImage, #headerBaseImage, #headerBaseImageFade {
       background-size: cover; } }
-  @media (max-width: 1048px) {
+  @media (max-width: 1200px) {
     #headerImage, #headerBaseImage, #headerBaseImageFade {
       background-size: 1200px; } }
 
 #headerImage {
   z-index: -30;
-  background-image: url("../img/center02_top.jpg"); }
-  @media (max-width: 480px) {
-    #headerImage {
-      background-image: url("../img/center01_mobile.jpg");
-      background-size: cover; } }
+  background-image: url("../img/headerBG_top.jpg"); }
 
 #headerBaseImage {
   display: none;
   z-index: -10;
-  background-image: url("../img/center02_base3.png"); }
+  background-image: url("../img/headerBG_base.png"); }
 
 #headerBaseImageFade {
-  background-image: url("../img/center02_base_fade3.png");
+  background-image: url("../img/headerBG_base_fade.png");
   z-index: -10; }
 
 #containerRootsImage {
@@ -59,16 +55,14 @@ h1, h2, h3, h4 {
   background-image: url("../img/rootsCentered.svg");
   background-repeat: no-repeat;
   background-position: top center;
-  background-size: 30%; }
-  @media (max-width: 600px) {
+  background-size: 600px;
+  background-color: initial; }
+  @media (max-aspect-ratio: 4 / 3) {
     #rootsImage {
-      background-size: 50%; } }
-  @media (max-width: 480px) {
+      background-color: red; } }
+  @media (max-aspect-ratio: 4 / 3) {
     #rootsImage {
-      background-size: 70%; } }
-  @media (max-width: 320px) {
-    #rootsImage {
-      background-size: 100%; } }
+      background-color: initial; } }
 
 #containerTitle {
   position: absolute;
