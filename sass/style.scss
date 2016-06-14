@@ -2,6 +2,8 @@
  * By Andrew Reid East */
 
 $headerBGmobile: "../img/headerBG_mobile.jpg";
+$headerBGfull: "../img/headerBG.jpg";
+
 $headerBGTop: "../img/headerBG_top.jpg";
 $headerBGBase: "../img/headerBG_base.png";
 $headerBGBaseFade: "../img/headerBG_base_fade.png";
@@ -41,14 +43,14 @@ h1, h2, h3, h4 {
 
 //*************************************** Header Images ***************************************
 .container-background {
-  position: absolute;
+  position: absolute; // TODO: convert bg images, etc. to relative position within fullpage.js' <section> elements
   left: 0;
   width: 100%;
 }
 // #containerHeaderImage {
 //   height: calc(#{$headerHeight} + #{$headerBaseHeight});
 // }
-#headerImage, #headerBaseImage, #headerBaseImageFade {
+#headerImageFull, #headerImage, #headerBaseImage, #headerBaseImageFade {
   // TODO: 50px area faded out reveals nav bar?
 
   height: calc(#{$headerHeight} + #{$headerBaseHeight});
@@ -62,6 +64,10 @@ h1, h2, h3, h4 {
   @media (max-width: 1200px) {
     background-size: 1200px;
   }
+}
+#headerImageFull {
+  z-index: -5;
+  background-image: url($headerBGfull);
 }
 #headerImage {
   z-index: -30;

@@ -14,16 +14,20 @@ h1, h2, h3, h4 {
   left: 0;
   width: 100%; }
 
-#headerImage, #headerBaseImage, #headerBaseImageFade {
+#headerImageFull, #headerImage, #headerBaseImage, #headerBaseImageFade {
   height: calc(100vh + 12vh);
   background-repeat: no-repeat;
   background-position: bottom center; }
   @media (min-width: 1201px) {
-    #headerImage, #headerBaseImage, #headerBaseImageFade {
+    #headerImageFull, #headerImage, #headerBaseImage, #headerBaseImageFade {
       background-size: cover; } }
   @media (max-width: 1200px) {
-    #headerImage, #headerBaseImage, #headerBaseImageFade {
+    #headerImageFull, #headerImage, #headerBaseImage, #headerBaseImageFade {
       background-size: 1200px; } }
+
+#headerImageFull {
+  z-index: -5;
+  background-image: url("../img/headerBG.jpg"); }
 
 #headerImage {
   z-index: -30;

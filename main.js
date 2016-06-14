@@ -1,4 +1,6 @@
 $(document).ready(function () {
+    $('#fullpage').fullpage();
+
     // var colors = ["#EBBD8A", "#C5A27D", "#BD915D"];
     // var currColor = 0;
     // function chgColor() {

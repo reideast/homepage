@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lange="en">
+<html lang="en">
 
 <head>
   <meta charset="utf-8">
@@ -23,9 +23,6 @@
     <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
   <![endif]-->
   
-  <!-- Vivus.js - SVG Path Animation Library: https://github.com/maxwellito/vivus, https://maxwellito.github.io/vivus/ -->
-  <!--<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/vivus/0.3.1/vivus.min.js"></script>-->
-  <script type="text/javascript" src="js/vivus.js"></script>
 
   <link href='https://fonts.googleapis.com/css?family=Indie+Flower' rel='stylesheet' type='text/css'><!--"RE" logo-->
   <link href='https://fonts.googleapis.com/css?family=Playfair+Display+SC' rel='stylesheet' type='text/css'><!--Page Title-->
@@ -39,57 +36,62 @@
 
 
 <body>
-
-<div style="position: absolute; width: 20px; height: 100vh; top: 0px; left: 10px; background-color: green; opacity: 0.6;"></div>
-  
-<div id="containerHeaderImage" class="container-background">
-  <div id="headerImage" class="container-background"></div>
-  <div id="headerBaseImage" class="container-background"></div>
-  <div id="headerBaseImageFade" class="container-background"></div>
-</div>
-<div id="containerRootsImage" class="container-background">
-  <div id="rootsImageSoil" class="container-background"></div>
-  <div id="rootsImage" class="container-background"></div>
-</div>
-
-<div id="containerTitle" class="container-fluid">
-  <div id="title">
-    <div class="row">
-      <div class="col-sm-offset-0 col-xs-12">
-        <h1>
-          Seedling<br>
-          Design<br>
-          Systems
-        </h1>
+<div id="fullpage"><!-- for fullpage.js -->
+  <!-- vertical 100vh ruler: --><!--<div style="position: absolute; width: 20px; height: 100vh; top: 0px; left: 10px; background-color: green; opacity: 0.6;"></div>-->
+  <!-- TODO: change <div class="section"> to <section class="section"> ...I checked source for fullpage.js, seems like it should be fine
+  <div class="section"><!-- "section" for fullpage.js -->
+    <div id="containerHeaderImage" class="container-background">
+      <div id="headerImageFull" class="container-background"></div>
+      <!--<div id="headerImage" class="container-background"></div>
+      <div id="headerBaseImage" class="container-background"></div>
+      <div id="headerBaseImageFade" class="container-background"></div>-->
+    </div>
+    <div id="containerTitle" class="container-fluid">
+      <div id="title">
+        <div class="row">
+          <div class="col-sm-offset-0 col-xs-12">
+            <h1>
+              Seedling<br>
+              Design<br>
+              Systems
+            </h1>
+          </div>
+        </div>
       </div>
-    </div>
+    </div><!-- containerTitle -->
   </div>
-</div>
-
-<section id="about" class="container">
-  <div class="row">
-    <div class="text-box col-sm-offset-8 col-sm-4">
-      <h1>Hello, world!</h1>
+  <div class="section">
+    <div id="containerRootsImage" class="container-background">
+      <div id="rootsImageSoil" class="container-background"></div>
+      <div id="rootsImage" class="container-background"></div>
     </div>
+    <section id="about" class="container">
+      <div class="row">
+        <div class="text-box col-sm-offset-8 col-sm-4">
+          <h1>Hello, world!</h1>
+        </div>
+      </div>
+      <div class="row">
+        <div class="text-box col-sm-offset-2 col-sm-4">
+          <p>We are Seedling Design Systems.</p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="text-box col-sm-offset-8 col-sm-4">
+          <p>, a premium web studio dedicated to exciting, robust web and app experiences for an interconnected world.</p>
+        </div>
+        <div class="col-sm-6 col-md-4 col-lg-4">
+          <!--<img class="img-circle img-responsive" width="300" height="300" src="img/profilePic.jpg" />-->
+        </div>
+      </div>
+    </section>
   </div>
-  <div class="row">
-    <div class="text-box col-sm-offset-2 col-sm-4">
-      <p>We are Seedling Design Systems.</p>
-    </div>
-  </div>
-  <div class="row">
-    <div class="text-box col-sm-offset-8 col-sm-4">
-      <p>, a premium web studio dedicated to exciting, robust web and app experiences for an interconnected world.</p>
-    </div>
-    <div class="col-sm-6 col-md-4 col-lg-4">
-      <!--<img class="img-circle img-responsive" width="300" height="300" src="img/profilePic.jpg" />-->
-    </div>
-  </div>
-</section>
-
-<footer class="container">
-  <p>Copyright &copy; Andrew Reid East 2016</p>
-</footer>
+  <div class="section">
+    <footer class="container">
+      <p>Copyright &copy; Andrew Reid East 2016</p>
+    </footer>
+  </div><!-- class="section" -->
+</div><!-- id="fullpage" -->
 
 
 <!-- Here follows the HIDDEN svg definitions -->
@@ -119,7 +121,24 @@
 <!-- **************************************************************************************************** -->  
 <!-- **************************************************************************************************** -->  
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script> <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script> <!-- Bootstrap js: Latest compiled and minified JavaScript -->
+  
+  <!-- Vivus.js - SVG Path Animation Library: https://github.com/maxwellito/vivus, https://maxwellito.github.io/vivus/ -->
+  <!--<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/vivus/0.3.1/vivus.min.js"></script>-->
+  <script type="text/javascript" src="js/vivus.js"></script>
+
+  <!-- fullpage.js - Scrolling Slides Library: https://github.com/alvarotrigo/fullPage.js -->
+  <link rel="stylesheet" type="text/css" href="js/fullpage.js/jquery.fullPage.css" />
+  <!--<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.8.1/jquery.fullPage.css">-->
+  <!-- This following line is only necessary in the case of using the plugin option `scrollOverflow:true` -->
+  <script type="text/javascript" src="js/fullpage.js/scrolloverflow.min.js"></script>
+  <!--<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.8.1/vendors/scrolloverflow.min.js"></script>-->
+  <script type="text/javascript" src="js/fullpage.js/jquery.fullPage.js"></script>
+  <!--<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.8.1/jquery.fullPage.js"></script>-->
+  
+
+
   <script src="main.js"></script>
 
   <!--<script>
