@@ -3,6 +3,8 @@
 
 $headerBGmobile: "../img/headerBG_mobile.jpg";
 $headerBGfull: "../img/headerBG.jpg";
+$headerBGfullTop: "../img/headerBGsplit_top.jpg";
+$headerBGfullBase: "../img/headerBGsplit_base_fade.png";
 
 $headerBGTop: "../img/headerBG_top.jpg";
 $headerBGBase: "../img/headerBG_base.png";
@@ -39,6 +41,36 @@ body {
 }
 h1, h2, h3, h4 {
   font-family: $fontTitle;
+}
+
+//*************************************** Fullpage.js *****************************************
+.section { // seems to be that I need this, even though spec for Fullpage.js doesn't mention it
+  background-size: cover;
+}
+#sectionSeedling {
+  background-image: url($headerBGfullTop);
+  background-position-x: center;
+}
+#sectionRoots {
+  background-image: url($rootsBG);
+  background-size: contain;
+  background-position-x: center;
+  background-position-y: -20px;
+  background-repeat: no-repeat;
+}
+.overlay {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+}
+#rootsOverlay {
+  background-color: $colorDarkSoil;
+}
+#rootsSoil {
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-image: url($headerBGfullBase);
 }
 
 //*************************************** Header Images ***************************************

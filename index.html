@@ -38,14 +38,14 @@
 <body>
 <div id="fullpage"><!-- for fullpage.js -->
   <!-- vertical 100vh ruler: --><!--<div style="position: absolute; width: 20px; height: 100vh; top: 0px; left: 10px; background-color: green; opacity: 0.6;"></div>-->
-  <!-- TODO: change <div class="section"> to <section class="section"> ...I checked source for fullpage.js, seems like it should be fine
-  <div class="section"><!-- "section" for fullpage.js -->
-    <div id="containerHeaderImage" class="container-background">
-      <div id="headerImageFull" class="container-background"></div>
+  <!-- TODO: change <div class="section"> to <section class="section"> ...I checked source for fullpage.js, seems like it should be fine -->
+  <div class="section" id="sectionSeedling"><!-- "section" for fullpage.js -->
+    <!--<div id="containerHeaderImage" class="container-background">-->
+      <!--<div id="headerImageFull" class="container-background"></div>-->
       <!--<div id="headerImage" class="container-background"></div>
       <div id="headerBaseImage" class="container-background"></div>
       <div id="headerBaseImageFade" class="container-background"></div>-->
-    </div>
+    <!--</div>-->
     <div id="containerTitle" class="container-fluid">
       <div id="title">
         <div class="row">
@@ -60,12 +60,14 @@
       </div>
     </div><!-- containerTitle -->
   </div>
-  <div class="section">
-    <div id="containerRootsImage" class="container-background">
+  <div class="section" id="sectionRoots">
+    <div id="rootsSoil" class="overlay"></div>
+    <div id="rootsOverlay" class="overlay"></div>
+    <!--<div id="containerRootsImage" class="container-background">
       <div id="rootsImageSoil" class="container-background"></div>
       <div id="rootsImage" class="container-background"></div>
-    </div>
-    <section id="about" class="container">
+    </div>-->
+    <div id="about" class="container">
       <div class="row">
         <div class="text-box col-sm-offset-8 col-sm-4">
           <h1>Hello, world!</h1>
@@ -84,7 +86,7 @@
           <!--<img class="img-circle img-responsive" width="300" height="300" src="img/profilePic.jpg" />-->
         </div>
       </div>
-    </section>
+    </div>
   </div>
   <div class="section">
     <footer class="container">
