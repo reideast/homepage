@@ -39,44 +39,42 @@ $(document).ready(function () {
     // }
 
     $(window).on('scroll', function () {
-        console.log("executed");
-    });
-    //     var top = $(window).scrollTop();
-    //     console.log("scrollTop=" + top);
-    //     var height = $(window).height();
-    //     // console.log("height=" + height);
-    //     // var percentScrolled = top / height;
-    //     // console.log(percentScrolled + "%");
-    //     // var opacity = 1 - percentScrolled;
-    //     // console.log(opacity);
-    //     // $("#headerBaseImage").css("opacity", Math.max(0, 1 - ($(window).scrollTop() / $(window).height())) + ""); // opacity = 1 - percentScrolled
+        var top = $(window).scrollTop();
+        console.log("scrollTop=" + top);
+        var height = $(window).height();
+        // console.log("height=" + height);
+        // var percentScrolled = top / height;
+        // console.log(percentScrolled + "%");
+        // var opacity = 1 - percentScrolled;
+        // console.log(opacity);
+        // $("#headerBaseImage").css("opacity", Math.max(0, 1 - ($(window).scrollTop() / $(window).height())) + ""); // opacity = 1 - percentScrolled
         
         
-    //     if (top > 80) {
-    //         $("#headerBaseImage").fadeOut(1000);
-    //         $("#rootsImageSoil").fadeOut(1000);
-    //     } else {
-    //         $("#headerBaseImage").fadeIn(200);
-    //         $("#rootsImageSoil").fadeIn(200);
-    //         $("#about0, #about1, #about2").hide();
-    //     }
+        if (top > 80) {
+            $("#headerBaseImage").fadeOut(1000);
+            $("#rootsImageSoil").fadeOut(1000);
+        } else {
+            $("#headerBaseImage").fadeIn(200);
+            $("#rootsImageSoil").fadeIn(200);
+            $("#about0, #about1, #about2").hide();
+        }
 
-    //     if (top > 300) {
-    //         $("#about0").slideDown(1000);
-    //     }
-    //     if (top > 450) {
-    //         $("#about1").slideDown(1000);
-    //    }
-    //     if (top > 600) {
-    //         $("#about2").slideDown(1000);
-    //     } 
+        if (top > 300) {
+            $("#about0").slideDown(1000);
+        }
+        if (top > 450) {
+            $("#about1").slideDown(1000);
+       }
+        if (top > 600) {
+            $("#about2").slideDown(1000);
+        } 
     
-    //     if (top > height) {
-    //         console.log("below");
-    //     } else {
-    //         console.log("above");
-    //     }
-    // });
+        if (top >= height) {
+            console.log("below");
+        } else {
+            console.log("above");
+        }
+    });
 
 
 
