@@ -16,7 +16,7 @@ $(document).ready(function () {
 
     var aboutTop = Array(3);
     $("#about div.text-box").each(function (i) {
-        $(this).hide();
+        // $(this).hide();
         this.id = "about" + i;
         if (i === 0) {
             aboutTop[i] = document.getElementById("about").offsetTop + this.offsetTop;
@@ -49,31 +49,37 @@ $(document).ready(function () {
         // console.log(opacity);
         // $("#headerBaseImage").css("opacity", Math.max(0, 1 - ($(window).scrollTop() / $(window).height())) + ""); // opacity = 1 - percentScrolled
         
+        if (top > 10) {
+            $("#rootsOverlay").fadeOut(1000);
+        } else {
+            $("#rootsOverlay").fadeIn(200);
+        }
         
-        if (top > 80) {
-            $("#headerBaseImage").fadeOut(1000);
-            $("#rootsImageSoil").fadeOut(1000);
-        } else {
-            $("#headerBaseImage").fadeIn(200);
-            $("#rootsImageSoil").fadeIn(200);
-            $("#about0, #about1, #about2").hide();
-        }
+        
+    //     if (top > 80) {
+    //         $("#headerBaseImage").fadeOut(1000);
+    //         $("#rootsImageSoil").fadeOut(1000);
+    //     } else {
+    //         $("#headerBaseImage").fadeIn(200);
+    //         $("#rootsImageSoil").fadeIn(200);
+    //         $("#about0, #about1, #about2").hide();
+    //     }
 
-        if (top > 300) {
-            $("#about0").slideDown(1000);
-        }
-        if (top > 450) {
-            $("#about1").slideDown(1000);
-       }
-        if (top > 600) {
-            $("#about2").slideDown(1000);
-        } 
+    //     if (top > 300) {
+    //         $("#about0").slideDown(1000);
+    //     }
+    //     if (top > 450) {
+    //         $("#about1").slideDown(1000);
+    //    }
+    //     if (top > 600) {
+    //         $("#about2").slideDown(1000);
+    //     } 
     
-        if (top >= height) {
-            console.log("below");
-        } else {
-            console.log("above");
-        }
+    //     if (top >= height) {
+    //         console.log("below");
+    //     } else {
+    //         console.log("above");
+    //     }
     });
 
 
@@ -81,6 +87,17 @@ $(document).ready(function () {
 
 
     $('#fullpage').fullpage({
-        scrollBar: true // scrollBar==true (or autoScrolling==false) must be set to allow other onScroll events to fire! (because w/o this option, the window doesn't actually scroll, as shown by observing $(window).scrollTop())
+        // modified my copy of Fullscreen.js to not require this: scrollBar: true // scrollBar==true (or autoScrolling==false) must be set to allow other onScroll events to fire! (because w/o this option, the window doesn't actually scroll, as shown by observing $(window).scrollTop())
+        // scrollhandler() line 892
+        // 1359
+        // because of this option in Fullpage.js: (line 196)
+            // if(options.autoScrolling && !options.scrollBar){
+            //     $htmlBody.css({
+            //         'overflow' : 'hidden',
+            //         'height' : '100%'
+            // });
+        
+        // NOTE: thos modifications won't work because Fullpage.js heavily modifies scroll behavior when Scrollbars are turned off, using TranslateY to scroll objects!
+        scrollBar: true
     });
 });

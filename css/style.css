@@ -9,6 +9,12 @@ body {
 h1, h2, h3, h4 {
   font-family: "Playfair Display SC", serif; }
 
+.verticalCenter {
+  position: relative;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%); }
+
 .section {
   background-size: cover; }
 
@@ -30,81 +36,21 @@ h1, h2, h3, h4 {
   top: 0; }
 
 #rootsOverlay {
-  background-color: #2A1704; }
+  background-color: #2A1704;
+  z-index: 20; }
 
 #rootsSoil {
+  background-size: contain;
   background-position: top center;
   background-repeat: no-repeat;
   background-image: url("../img/headerBGsplit_base_fade.png"); }
 
-.container-background {
-  position: absolute;
-  left: 0;
-  width: 100%; }
-
-#headerImageFull, #headerImage, #headerBaseImage, #headerBaseImageFade {
-  height: calc(100vh + 12vh);
-  background-repeat: no-repeat;
-  background-position: bottom center; }
-  @media (min-width: 1201px) {
-    #headerImageFull, #headerImage, #headerBaseImage, #headerBaseImageFade {
-      background-size: cover; } }
-  @media (max-width: 1200px) {
-    #headerImageFull, #headerImage, #headerBaseImage, #headerBaseImageFade {
-      background-size: 1200px; } }
-
-#headerImageFull {
-  z-index: -5;
-  background-image: url("../img/headerBG.jpg"); }
-
-#headerImage {
-  z-index: -30;
-  background-image: url("../img/headerBG_top.jpg"); }
-
-#headerBaseImage {
-  display: none;
-  z-index: -10;
-  background-image: url("../img/headerBG_base.png"); }
-
-#headerBaseImageFade {
-  background-image: url("../img/headerBG_base_fade.png");
-  z-index: -10; }
-
-#containerRootsImage {
-  top: 100vh;
-  height: 200vh; }
-
-#rootsImage, #rootsImageSoil {
-  height: 200vh; }
-
-#rootsImageSoil {
-  display: none;
-  z-index: -19;
-  background-color: #2A1704; }
-
-#rootsImage {
-  z-index: -20;
-  background-image: url("../img/rootsCentered.svg");
-  background-repeat: no-repeat;
-  background-position: top center;
-  background-size: 600px;
-  background-color: initial; }
-  @media (max-aspect-ratio: 4 / 3) {
-    #rootsImage {
-      background-color: red; } }
-  @media (max-aspect-ratio: 4 / 3) {
-    #rootsImage {
-      background-color: initial; } }
-
 #containerTitle {
-  position: absolute;
   z-index: 10;
   width: 100%;
-  top: calc(100vh / 2);
-  -webkit-transform: translateY(-50%);
-          transform: translateY(-50%); }
+  height: 100%; }
 
-#title h1 {
+#containerTitle h1 {
   color: white;
   text-align: center;
   font-size: 9em;
@@ -113,11 +59,11 @@ h1, h2, h3, h4 {
 
 #about {
   position: absolute;
-  top: 100vh;
-  margin-top: 100px; }
+  top: 0;
+  margin-top: 50px; }
 
 .text-box {
   padding: 40px; }
 
 footer {
-  position: absolute; }
+  position: relative; }

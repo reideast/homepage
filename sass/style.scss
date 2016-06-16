@@ -43,6 +43,13 @@ h1, h2, h3, h4 {
   font-family: $fontTitle;
 }
 
+//************************************* Generic Classes ***************************************
+.verticalCenter {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
 //*************************************** Fullpage.js *****************************************
 .section { // seems to be that I need this, even though spec for Fullpage.js doesn't mention it
   background-size: cover;
@@ -66,110 +73,110 @@ h1, h2, h3, h4 {
 }
 #rootsOverlay {
   background-color: $colorDarkSoil;
+  z-index: 20;
 }
 #rootsSoil {
+  background-size: contain;
   background-position: top center;
   background-repeat: no-repeat;
   background-image: url($headerBGfullBase);
 }
 
-//*************************************** Header Images ***************************************
-.container-background {
-  position: absolute; // TODO: convert bg images, etc. to relative position within fullpage.js' <section> elements
-  left: 0;
-  width: 100%;
-}
-// #containerHeaderImage {
-//   height: calc(#{$headerHeight} + #{$headerBaseHeight});
+// //*************************************** Header Images ***************************************
+// .container-background {
+//   position: absolute; // TODO: convert bg images, etc. to relative position within fullpage.js' <section> elements
+//   left: 0;
+//   width: 100%;
 // }
-#headerImageFull, #headerImage, #headerBaseImage, #headerBaseImageFade {
-  // TODO: 50px area faded out reveals nav bar?
+// // #containerHeaderImage {
+// //   height: calc(#{$headerHeight} + #{$headerBaseHeight});
+// // }
+// #headerImageFull, #headerImage, #headerBaseImage, #headerBaseImageFade {
+//   // TODO: 50px area faded out reveals nav bar?
 
-  height: calc(#{$headerHeight} + #{$headerBaseHeight});
-  background-repeat: no-repeat;
-  background-position: bottom center;
+//   height: calc(#{$headerHeight} + #{$headerBaseHeight});
+//   background-repeat: no-repeat;
+//   background-position: bottom center;
 
 
-  @media (min-width: 1201px) {
-    background-size: cover;
-  }
-  @media (max-width: 1200px) {
-    background-size: 1200px;
-  }
-}
-#headerImageFull {
-  z-index: -5;
-  background-image: url($headerBGfull);
-}
-#headerImage {
-  z-index: -30;
-  background-image: url($headerBGTop);
-  // @media (max-width: 480px) {
-  //   background-image: url($headerBGmobile);
-  //   background-size: cover;
-  // }
-}
-#headerBaseImage {
-  display: none;
-  z-index: -10;
-  background-image: url($headerBGBase);
-  // top: -1px; // TODO: fix seam between images. is this an artifact of the photo editing? (note: shows in FF and Ch)
-}
-#headerBaseImageFade {
-  background-image: url($headerBGBaseFade);
-  // top: -1px; // TODO: fix seam between images. is this an artifact of the photo editing? (note: shows in FF and Ch)
-  z-index: -10;
-}
+//   @media (min-width: 1201px) {
+//     background-size: cover;
+//   }
+//   @media (max-width: 1200px) {
+//     background-size: 1200px;
+//   }
+// }
+// #headerImageFull {
+//   z-index: -5;
+//   background-image: url($headerBGfull);
+// }
+// #headerImage {
+//   z-index: -30;
+//   background-image: url($headerBGTop);
+//   // @media (max-width: 480px) {
+//   //   background-image: url($headerBGmobile);
+//   //   background-size: cover;
+//   // }
+// }
+// #headerBaseImage {
+//   display: none;
+//   z-index: -10;
+//   background-image: url($headerBGBase);
+//   // top: -1px; // TODO: fix seam between images. is this an artifact of the photo editing? (note: shows in FF and Ch)
+// }
+// #headerBaseImageFade {
+//   background-image: url($headerBGBaseFade);
+//   // top: -1px; // TODO: fix seam between images. is this an artifact of the photo editing? (note: shows in FF and Ch)
+//   z-index: -10;
+// }
 
-#containerRootsImage {
-  top: $headerHeight;
-  height: $headerHeight * 2; // TODO: set actual height
-}
-#rootsImage, #rootsImageSoil {
-  height: $headerHeight * 2;
-}
-#rootsImageSoil {
-  display: none;
-  z-index: -19;
-  background-color: $colorDarkSoil;
-}
-#rootsImage {
-  z-index: -20;
-  background-image: url($rootsBG); //TODO: move $bgUnderground to it's own element to simplify bg-position
-  background-repeat: no-repeat;
-  background-position: top center;
+// #containerRootsImage {
+//   top: $headerHeight;
+//   height: $headerHeight * 2; // TODO: set actual height
+// }
+// #rootsImage, #rootsImageSoil {
+//   height: $headerHeight * 2;
+// }
+// #rootsImageSoil {
+//   display: none;
+//   z-index: -19;
+//   background-color: $colorDarkSoil;
+// }
+// #rootsImage {
+//   z-index: -20;
+//   background-image: url($rootsBG); //TODO: move $bgUnderground to it's own element to simplify bg-position
+//   background-repeat: no-repeat;
+//   background-position: top center;
 
-  background-size: 600px;
-  // @media (max-width: 600px) {
-  //   background-size: 50%;
-  // }
-  // @media (max-width: 480px) {
-  //   background-size: 70%;
-  // }
-  // @media (max-width: 320px) {
-  //   background-size: 100%;
-  // }
+//   background-size: 600px;
+//   // @media (max-width: 600px) {
+//   //   background-size: 50%;
+//   // }
+//   // @media (max-width: 480px) {
+//   //   background-size: 70%;
+//   // }
+//   // @media (max-width: 320px) {
+//   //   background-size: 100%;
+//   // }
 
-  background-color: initial;
-  @media (max-aspect-ratio: 4 / 3) {
-    background-color: red;
-  }
-  @media (max-aspect-ratio: 4 / 3) {
-    background-color: initial;
-  }
+//   background-color: initial;
+//   @media (max-aspect-ratio: 4 / 3) {
+//     background-color: red;
+//   }
+//   @media (max-aspect-ratio: 4 / 3) {
+//     background-color: initial;
+//   }
 
-}
+// }
 
 //*************************************** Page Title ***************************************
-#containerTitle{
-  position: absolute;
+#containerTitle {
   z-index: 10;
   width: 100%;
-  top: calc(#{$headerHeight} / 2);
-  transform: translateY(-50%);
+  height: 100%;
 }
-#title h1 {
-  // font-family: Vollkorn;
+#containerTitle h1 {
+  // font-familky: Vollkorn;
   color: white;
   text-align: center;
   font-size: 9em;
@@ -181,8 +188,8 @@ h1, h2, h3, h4 {
 //*************************************** Main Content ***************************************
 #about {
   position: absolute;
-  top: $headerHeight;
-  margin-top: 100px;
+  top: 0;
+  margin-top: 50px;
 }
 
 .text-box {
@@ -200,5 +207,5 @@ h1, h2, h3, h4 {
 //}
 
 footer {
-  position: absolute;
+  position: relative;
 }
