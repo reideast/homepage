@@ -64,6 +64,7 @@ h1, h2, h3, h4 {
   background-position-x: center;
   background-position-y: -20px;
   background-repeat: no-repeat;
+  z-index: -30;
 }
 .overlay {
   width: 100%;
@@ -73,13 +74,14 @@ h1, h2, h3, h4 {
 }
 #rootsOverlay {
   background-color: $colorDarkSoil;
-  z-index: 20;
+  z-index: -10;
 }
 #rootsSoil {
   background-size: contain;
   background-position: top center;
   background-repeat: no-repeat;
   background-image: url($headerBGfullBase);
+  z-index: -20;
 }
 
 // //*************************************** Header Images ***************************************
@@ -180,20 +182,25 @@ h1, h2, h3, h4 {
   color: white;
   text-align: center;
   font-size: 9em;
+  font-weight: normal;
   //TODO: media query for ultra-high-res to increse font-size by em
   line-height: 1.1;
   margin-top: 0;
 }
 
 //*************************************** Main Content ***************************************
-#about {
-  position: absolute;
-  top: 0;
-  margin-top: 50px;
-}
+// #about {
+//   position: absolute;
+//   top: 0;
+//   margin-top: 50px;
+// }
 
-.text-box {
-  padding: 40px;
+// .text-box {
+//   padding: 40px;
+// }
+
+#introText {
+  z-index: 10;
 }
 
 // .button-img {

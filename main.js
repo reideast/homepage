@@ -49,6 +49,8 @@ $(document).ready(function () {
         // console.log(opacity);
         // $("#headerBaseImage").css("opacity", Math.max(0, 1 - ($(window).scrollTop() / $(window).height())) + ""); // opacity = 1 - percentScrolled
         
+        // TODO: look at options for Fullpage.js for callback functions to call after scrolling??!? 
+
         if (top > 10) {
             $("#rootsOverlay").fadeOut(1000);
         } else {
