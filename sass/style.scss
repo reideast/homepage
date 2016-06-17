@@ -51,7 +51,7 @@ h1, h2, h3, h4 {
 }
 
 //*************************************** Fullpage.js *****************************************
-.section { // seems to be that I need this, even though spec for Fullpage.js doesn't mention it
+.section { // seems to be that I need this, even though spec for Fullpage.js implies it already exists
   background-size: cover;
 }
 #sectionSeedling {
@@ -201,6 +201,24 @@ h1, h2, h3, h4 {
 
 #introText {
   z-index: 10;
+  height: 100%;
+}
+#intro1, #intro2, #intro3 {
+  position: relative;
+  width: 30%;
+}
+#intro1 {
+  top: 20%;
+  left: 65%;
+}
+#intro2 {
+  top: 35%;
+  // right: 30%;
+  left: 10%;
+}
+#intro3 {
+  top: 50%;
+  left: 60%;
 }
 
 // .button-img {
