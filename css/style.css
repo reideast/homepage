@@ -62,23 +62,41 @@ h1, h2, h3, h4 {
 
 #introText {
   z-index: 10;
-  height: 100%; }
+  height: 100%;
+  width: 100%; }
 
-#intro1, #intro2, #intro3 {
-  position: relative;
-  width: 30%; }
+#sectionRoots {
+  background-size: auto 768px; }
+
+.introSVG {
+  position: absolute; }
+
+.introTextBox {
+  position: absolute;
+  width: 300px; }
 
 #intro1 {
-  top: 20%;
-  left: 65%; }
+  bottom: calc(100% - 768px + 591px);
+  left: calc(50% + 180px); }
+
+#rootIntro1 {
+  width: 122.4px;
+  bottom: calc(100% - 768px + 585px);
+  left: calc(50% + 84px); }
 
 #intro2 {
-  top: 35%;
-  left: 10%; }
+  top: 300px;
+  right: calc(50% + 130px); }
+
+#rootIntro2 {
+  width: 96px; }
 
 #intro3 {
-  top: 50%;
-  left: 60%; }
+  top: 413px;
+  left: calc(50% + 138px); }
+
+#rootIntro3 {
+  width: 136px; }
 
 footer {
   position: relative; }
