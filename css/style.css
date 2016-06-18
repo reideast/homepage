@@ -89,14 +89,18 @@ h1, h2, h3, h4 {
   right: calc(50% + 130px); }
 
 #rootIntro2 {
-  width: 96px; }
+  width: 96px;
+  top: 300px;
+  right: calc(50% + 130px); }
 
 #intro3 {
   top: 413px;
   left: calc(50% + 138px); }
 
 #rootIntro3 {
-  width: 136px; }
+  width: 136px;
+  top: 413px;
+  left: calc(50% + 138px); }
 
 footer {
   position: relative; }
