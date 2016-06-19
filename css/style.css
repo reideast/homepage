@@ -76,31 +76,31 @@ h1, h2, h3, h4 {
   width: 300px; }
 
 #intro1 {
-  bottom: calc(100% - 768px + 591px);
-  left: calc(50% + 180px); }
+  bottom: calc(100% - 768px + 622px);
+  left: calc(50% + 187px); }
 
 #rootIntro1 {
   width: 122.4px;
   bottom: calc(100% - 768px + 585px);
-  left: calc(50% + 84px); }
+  left: calc(50% + 81px); }
 
 #intro2 {
   top: 300px;
-  right: calc(50% + 130px); }
+  right: calc(50% + 156px); }
 
 #rootIntro2 {
-  width: 96px;
-  top: 300px;
-  right: calc(50% + 130px); }
+  width: 76.8px;
+  top: 212px;
+  right: calc(50% + 113px); }
 
 #intro3 {
-  top: 413px;
-  left: calc(50% + 138px); }
+  top: 489px;
+  left: calc(50% + 205px); }
 
 #rootIntro3 {
-  width: 136px;
-  top: 413px;
-  left: calc(50% + 138px); }
+  width: 108.8px;
+  top: 439px;
+  left: calc(50% + 93px); }
 
 footer {
   position: relative; }

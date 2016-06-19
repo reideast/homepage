@@ -220,31 +220,31 @@ h1, h2, h3, h4 {
 }
 #intro1 {
   // top: 150px;
-  bottom: calc(100% - 768px + 591px);
-  left: calc(50% + 180px);
+  bottom: calc(100% - 768px + 622px);
+  left: calc(50% + 187px);
 }
 #rootIntro1 {
   width: 0.8 * 153px; // uses Sass to calc
   bottom: calc(100% - 768px + 585px);
-  left: calc(50% + 84px);
+  left: calc(50% + 81px);
 }
 #intro2 {
   top: 300px;
-  right: calc(50% + 130px)
+  right: calc(50% + 156px)
 }
 #rootIntro2 {
-  width: 96px;
-  top: 300px;
-  right: calc(50% + 130px)
+  width: 0.8 * 96px;
+  top: 212px;
+  right: calc(50% + 113px)
 }
 #intro3 {
-  top: 413px;
-  left: calc(50% + 138px);
+  top: 489px;
+  left: calc(50% + 205px);
 }
 #rootIntro3 {
-  width: 136px;
-  top: 413px;
-  left: calc(50% + 138px);
+  width: 0.8 * 136px;
+  top: 439px;
+  left: calc(50% + 93px);
 }
 
 // .button-img {
