@@ -76,7 +76,7 @@ h1, h2, h3, h4 {
 }
 #rootsOverlay {
   background-color: $colorDarkSoil;
-  z-index: -10;
+  z-index: 50;
 }
 #rootsSoil {
   background-size: contain;
