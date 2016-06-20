@@ -102,5 +102,10 @@ h1, h2, h3, h4 {
   top: 439px;
   left: calc(50% + 93px); }
 
+#rootsWireframe {
+  width: 150px;
+  top: 0px;
+  left: calc(50% - 100px); }
+
 footer {
   position: relative; }

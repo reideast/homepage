@@ -108,6 +108,8 @@ $(document).ready(function () {
     // var vivusRoots2 = new Vivus('rootIntro2', {duration: 70, type: "async"}, function () {console.log("Vivus on rootIntro2 is done"); });
     // var vivusRoots3 = new Vivus('rootIntro3', {duration: 70, type: "async"}, function () {console.log("Vivus on rootIntro3 is done"); });
 
+    // var vivusWireframe = new Vivus('roots')
+
     $('#fullpage').fullpage({
         // modified my copy of Fullscreen.js to not require this: scrollBar: true // scrollBar==true (or autoScrolling==false) must be set to allow other onScroll events to fire! (because w/o this option, the window doesn't actually scroll, as shown by observing $(window).scrollTop())
         // scrollhandler() line 892
