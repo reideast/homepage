@@ -85,14 +85,16 @@ $(document).ready(function () {
     // });
 
     function showRoots() {
-        $("#rootsOverlay").fadeOut(1000, function () {
+        // $("#rootsOverlay").fadeOut(1000, function () {
+        $("#rootsOverlay").fadeOut(1000);
+        window.setTimeout(function () {
             console.log("rootsOverlay fadeOut callback");
             vivusWireframe.play();
             vivusRoots.forEach(function (item, i) {
                 console.log("foreach vivusRoots[" + i + "]");
                 item.play();
             });
-        });
+        }, 300);
     }
     function hideRoots() {
         $("#rootsOverlay").fadeIn(700);
