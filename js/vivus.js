@@ -468,6 +468,18 @@ Vivus.prototype.setOptions = function (options) {
   if (this.delay >= this.duration) {
     throw new Error('Vivus [constructor]: delay must be shorter than duration');
   }
+
+  // Added by Andrew Reid East
+  if (!!options.finalAnimation && options.finalAnimation.constructor !== Function) {
+    throw new Error('Vivus [constructor]: "finalAnimation" parameter must be a function');
+  }
+  if (options.finalAnimation) {
+    this.finalAnimation = options.finalAnimation; // || function () {};
+    this.hasFinalAnimation = true;
+  } else {
+    this.hasFinalAnimation = false;
+  }
+  // End Andrew Reid East
 };
 
 /**
@@ -523,7 +535,10 @@ Vivus.prototype.mapping = function () {
     }
     pathObj = {
       el: path,
-      length: Math.ceil(path.getTotalLength())
+      length: Math.ceil(path.getTotalLength()),
+      
+      // Added by Andrew Reid East
+      hasPlayedFinalAnimation: (this.hasFinalAnimation ? false : true) // if this instance doesn't have a final animation function, then set "already played" to true so it never plays
     };
     // Test if the path length is correct
     if (isNaN(pathObj.length)) {
@@ -648,6 +663,14 @@ Vivus.prototype.trace = function () {
       path.progress = progress;
       path.el.style.strokeDashoffset = Math.floor(path.length * (1 - progress));
       this.renderPath(i);
+      
+      // Added by Andrew Reid East
+      if (!path.hasPlayedFinalAnimation && path.el.style.strokeDashoffset <= 0) { //&& path.el.style.strokeDashoffset >= path.length) {
+        // console.log("offset=" + path.el.style.strokeDashoffset + " length=" + path.length);
+        path.hasPlayedFinalAnimation = true;
+        this.finalAnimation(path.el);
+      }
+      // End Andrew Reid East
     }
   }
 };

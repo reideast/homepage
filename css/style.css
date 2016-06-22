@@ -100,9 +100,9 @@ h1, h2, h3, h4 {
   top: 439px;
   left: calc(50% + 93px); }
 
-#rootsWireframe {
-  height: 768px;
-  width: auto;
+#rootsWireframe, #rootsNotWireframe {
+  height: 1130px;
+  width: 600px;
   top: -20px;
   left: 50%;
   -webkit-transform: translateX(-50%);
