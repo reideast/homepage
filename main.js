@@ -85,41 +85,48 @@ $(document).ready(function () {
     // });
 
     function showRoots() {
-        // $("#rootsOverlay").fadeOut(1000, function () {
-        $("#rootsOverlay").fadeOut(1000);
-        window.setTimeout(function () {
-            console.log("rootsOverlay fadeOut callback");
+        $("#rootsOverlay").fadeOut(1000); //hide brown "soil" overlay
+        window.setTimeout(function () { // start animation after delay{
             vivusWireframe.play();
-            // window.setTimeout(function () { $("#rootsWireframe").css("opacity", 0.5); }, 1000);
-            vivusRoots.forEach(function (item, i) {
-                console.log("foreach vivusRoots[" + i + "]");
-                item.play();
-            });
+            // vivusRoots.forEach(function (item, i) {
+            //     item.play();
+            // });
+            
+            // show text boxes
+            window.setTimeout(function () {
+                $("#intro1").fadeIn(300);
+                window.setTimeout(function () {
+                    $("#intro2").fadeIn(300);
+                    setTimeout(function () {
+                        $("#intro3").fadeIn(300);
+                    }, 800);
+                }, 800);
+            }, 1700);
         }, 300);
     }
     function hideRoots() {
         $("#rootsOverlay").fadeIn(700);
         vivusWireframe.reset();
-        vivusRoots.forEach(function (item) {
-            item.reset();
-        });
+        $("#intro1, #intro2, #intro3").hide();
+        $("#rootsNotWireframe").fadeOut(500);
+        // vivusRoots.forEach(function (item, i) {
+        //     item.reset();
+        // });
     }
 
-    var vivusRoots = new Array();
+    // var vivusRoots = new Array();
     for (i = 1; i <= 3; ++i) {
-        vivusRoots.push(new Vivus('rootIntro' + i, {start: "manual", duration: 70, type: "async"}, function () {console.log("Vivus on " + this.el.id + " is done"); }));
+        // vivusRoots.push(new Vivus('rootIntro' + i, {start: "manual", duration: 70, type: "async"}, function () {console.log("Vivus on " + this.el.id + " is done"); }));
+        $("#intro" + i).hide();
     }
-    // var vivusRoots1 = new Vivus('rootIntro1', {duration: 70, type: "async"}, function () {console.log("Vivus on rootIntro1 is done"); });
-    // var vivusRoots2 = new Vivus('rootIntro2', {duration: 70, type: "async"}, function () {console.log("Vivus on rootIntro2 is done"); });
-    // var vivusRoots3 = new Vivus('rootIntro3', {duration: 70, type: "async"}, function () {console.log("Vivus on rootIntro3 is done"); });
 
 
     $("#rootsNotWireframe").hide();
     var vivusWireframe = new Vivus('rootsWireframe', {start: "manual", duration: 75, delay: 30, type: "oneByOne", finalAnimation: function (path) {
         // console.log(path);
-        window.setTimeout(function () { path.style.opacity = "0.3" }, 700);
+        window.setTimeout(function () { path.style.opacity = "0.3"; }, 1700);
     }}, function () {
-        $("#rootsNotWireframe").fadeIn(1000); // TODO: change this to a Vivus animation
+        $("#rootsNotWireframe").fadeIn(500); // TODO: change this to a Vivus animation
     });
 
     $('#fullpage').fullpage({

@@ -77,23 +77,26 @@ h1, h2, h3, h4 {
   bottom: calc(100% - 768px + 622px);
   left: calc(50% + 187px); }
 
+#intro2 {
+  top: 300px;
+  right: calc(50% + 156px); }
+
+#intro3 {
+  top: 489px;
+  left: calc(50% + 205px); }
+
+#rootIntro1, #rootIntro2, #rootIntro3 {
+  display: none; }
+
 #rootIntro1 {
   width: 122.4px;
   bottom: calc(100% - 768px + 585px);
   left: calc(50% + 81px); }
 
-#intro2 {
-  top: 300px;
-  right: calc(50% + 156px); }
-
 #rootIntro2 {
   width: 76.8px;
   top: 212px;
   right: calc(50% + 113px); }
-
-#intro3 {
-  top: 489px;
-  left: calc(50% + 205px); }
 
 #rootIntro3 {
   width: 108.8px;
@@ -101,8 +104,8 @@ h1, h2, h3, h4 {
   left: calc(50% + 93px); }
 
 #rootsWireframe, #rootsNotWireframe {
-  height: 1130px;
-  width: 600px;
+  height: 100%;
+  width: auto;
   top: -20px;
   left: 50%;
   -webkit-transform: translateX(-50%);
