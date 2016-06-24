@@ -88,9 +88,6 @@ $(document).ready(function () {
         $("#rootsOverlay").fadeOut(1000); //hide brown "soil" overlay
         window.setTimeout(function () { // start animation after delay{
             vivusWireframe.play();
-            // vivusRoots.forEach(function (item, i) {
-            //     item.play();
-            // });
             
             // show text boxes
             window.setTimeout(function () {
@@ -108,25 +105,23 @@ $(document).ready(function () {
         $("#rootsOverlay").fadeIn(700);
         vivusWireframe.reset();
         $("#intro1, #intro2, #intro3").hide();
-        $("#rootsNotWireframe").fadeOut(500);
-        // vivusRoots.forEach(function (item, i) {
-        //     item.reset();
-        // });
+        $("#rootsNotWireframeMain").fadeOut(500);
+        vivusRoots.reset();
     }
 
-    // var vivusRoots = new Array();
     for (i = 1; i <= 3; ++i) {
-        // vivusRoots.push(new Vivus('rootIntro' + i, {start: "manual", duration: 70, type: "async"}, function () {console.log("Vivus on " + this.el.id + " is done"); }));
         $("#intro" + i).hide();
     }
 
 
-    $("#rootsNotWireframe").hide();
+    $("#rootsNotWireframeMain").hide();
+    var vivusRoots = new Vivus("rootsNotWireframeOutside", {start: "manual", duration: 200});
     var vivusWireframe = new Vivus('rootsWireframe', {start: "manual", duration: 75, delay: 30, type: "oneByOne", finalAnimation: function (path) {
         // console.log(path);
         window.setTimeout(function () { path.style.opacity = "0.3"; }, 1700);
     }}, function () {
-        $("#rootsNotWireframe").fadeIn(500); // TODO: change this to a Vivus animation
+        $("#rootsNotWireframeMain").fadeIn(500); // TODO: change this to a Vivus animation
+        vivusRoots.play();
     });
 
     $('#fullpage').fullpage({
