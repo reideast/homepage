@@ -74,37 +74,25 @@ h1, h2, h3, h4 {
   width: 300px; }
 
 #intro1 {
-  bottom: calc(100% - 768px + 622px);
-  left: calc(50% + 187px); }
+  bottom: calc(100% - 768px + 612px);
+  left: calc(50% + 177px);
+  width: 350px; }
 
 #intro2 {
-  top: 300px;
-  right: calc(50% + 156px); }
+  width: 350px;
+  text-align: right;
+  top: 284px;
+  right: calc(50% + 167px); }
 
 #intro3 {
-  top: 489px;
-  left: calc(50% + 205px); }
+  top: 441px;
+  left: calc(50% + 185px); }
 
 #rootIntro1, #rootIntro2, #rootIntro3 {
   display: none; }
 
-#rootIntro1 {
-  width: 122.4px;
-  bottom: calc(100% - 768px + 585px);
-  left: calc(50% + 81px); }
-
-#rootIntro2 {
-  width: 76.8px;
-  top: 212px;
-  right: calc(50% + 113px); }
-
-#rootIntro3 {
-  width: 108.8px;
-  top: 439px;
-  left: calc(50% + 93px); }
-
 #rootsWireframe, #rootsNotWireframe {
-  height: 100%;
+  height: 768px;
   width: auto;
   top: -20px;
   left: 50%;
