@@ -91,7 +91,7 @@ h1, h2, h3, h4 {
 #rootIntro1, #rootIntro2, #rootIntro3 {
   display: none; }
 
-#rootsWireframe, #rootsNotWireframe {
+#rootsWireframe, #rootsNotWireframeMain, #rootsNotWireframeOutside {
   height: 768px;
   width: auto;
   top: -20px;
