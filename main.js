@@ -87,7 +87,9 @@ $(document).ready(function () {
     function showRoots() {
         $("#rootsOverlay").fadeOut(1000); //hide brown "soil" overlay
         window.setTimeout(function () { // start animation after delay{
-            vivusWireframe.play();
+
+            //TODO: enable this line, delete the next line // vivusWireframe.play();
+            vivusTaproot.play();
             
             // show text boxes
             window.setTimeout(function () {
@@ -105,7 +107,8 @@ $(document).ready(function () {
         $("#rootsOverlay").fadeIn(700);
         vivusWireframe.reset();
         $("#intro1, #intro2, #intro3").hide();
-        $("#rootsNotWireframeMain").fadeOut(500);
+        // $("#rootsNotWireframeMain").fadeOut(500);
+        vivusTaproot.reset();
         vivusRoots.reset();
     }
 
@@ -114,15 +117,18 @@ $(document).ready(function () {
     }
 
 
-    $("#rootsNotWireframeMain").hide();
-    var vivusRoots = new Vivus("rootsNotWireframeOutside", {start: "manual", duration: 200});
+    // $("#rootsNotWireframeMain").hide();
     var vivusWireframe = new Vivus('rootsWireframe', {start: "manual", duration: 75, delay: 30, type: "oneByOne", finalAnimation: function (path) {
         // console.log(path);
         window.setTimeout(function () { path.style.opacity = "0.3"; }, 1700);
     }}, function () {
-        $("#rootsNotWireframeMain").fadeIn(500); // TODO: change this to a Vivus animation
+        // $("#rootsNotWireframeMain").fadeIn(500); // TODO: change this to a Vivus animation
+        vivusTaproot.play();
+    });
+    var vivusTaproot = new Vivus("rootsNotWireframeMain", {start: "manual", duration: 1000, type: "async"}, function () {
         vivusRoots.play();
     });
+    var vivusRoots = new Vivus("rootsNotWireframeOutside", {start: "manual", duration: 200});
 
     $('#fullpage').fullpage({
         // modified my copy of Fullscreen.js to not require this: scrollBar: true // scrollBar==true (or autoScrolling==false) must be set to allow other onScroll events to fire! (because w/o this option, the window doesn't actually scroll, as shown by observing $(window).scrollTop())
