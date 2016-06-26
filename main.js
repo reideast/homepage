@@ -88,8 +88,12 @@ $(document).ready(function () {
         $("#rootsOverlay").fadeOut(1000); //hide brown "soil" overlay
         window.setTimeout(function () { // start animation after delay{
 
-            //TODO: enable this line, delete the next line // vivusWireframe.play();
-            vivusTaproot.play();
+            //TODO: enable this line, delete the next line 
+            vivusWireframe.play();
+            window.setTimeout(function () {
+                vivusTaproot.play();
+            }, 400);
+            // vivusTaproot.play();
             
             // show text boxes
             window.setTimeout(function () {
@@ -107,7 +111,6 @@ $(document).ready(function () {
         $("#rootsOverlay").fadeIn(700);
         vivusWireframe.reset();
         $("#intro1, #intro2, #intro3").hide();
-        // $("#rootsNotWireframeMain").fadeOut(500);
         vivusTaproot.reset();
         vivusRoots.reset();
     }
@@ -117,18 +120,45 @@ $(document).ready(function () {
     }
 
 
-    // $("#rootsNotWireframeMain").hide();
     var vivusWireframe = new Vivus('rootsWireframe', {start: "manual", duration: 75, delay: 30, type: "oneByOne", finalAnimation: function (path) {
-        // console.log(path);
-        window.setTimeout(function () { path.style.opacity = "0.3"; }, 1700);
-    }}, function () {
-        // $("#rootsNotWireframeMain").fadeIn(500); // TODO: change this to a Vivus animation
-        vivusTaproot.play();
+        window.setTimeout(function () { path.style.opacity = "0.3"; }, 2200);
+    }}); //, function () {
+        //vivusTaproot.play();
+    //});
+    
+    // Add data-* attributes to #rootsWireframeMain's paths for the Vuvus.js "scenerio"
+    var totalFrames = 150;
+    // list of paths to set data-* for: key is base of id string, value = number of paths in that set
+    var paths = {"taprootOutsideLeft": 7, "taprootInsideLeft": 3, "taprootInsideRight": 3, "taprootOutsideRight": 3}
+    var keys = Object.keys(paths);
+    keys.forEach(function (key) {
+        var totalLength = 0;
+        for (var i = 0; i < paths[key]; ++i) {
+            totalLength += document.getElementById(key + i).getTotalLength();
+        }
+
+        // var division = totalFrames / paths[key];
+        var prev = 0;
+        for (var i = 0; i < paths[key]; ++i) {
+            // var el = $("#" + key + i);
+            // el.data("start", prev);
+            // el.data("duration", division);
+            var el = document.getElementById(key + i);
+            el.setAttribute("data-start", prev);
+
+            var fraction = el.getTotalLength() / totalLength;
+            var division = totalFrames * fraction;
+            el.setAttribute("data-duration", division);
+            prev += division;
+            console.log(key + i + ": start=" + el.getAttribute("data-start") + " duration=" + el.getAttribute("data-duration"));
+            // console.log(key + i + ": start=" + el.data("start") + " duration=" + el.data("duration"));
+        }
     });
-    var vivusTaproot = new Vivus("rootsNotWireframeMain", {start: "manual", duration: 1000, type: "async"}, function () {
+
+    var vivusTaproot = new Vivus("rootsNotWireframeMain", {type: "scenario", start: "manual"}, function () {
         vivusRoots.play();
     });
-    var vivusRoots = new Vivus("rootsNotWireframeOutside", {start: "manual", duration: 200});
+    var vivusRoots = new Vivus("rootsNotWireframeOutside", {start: "manual", duration: 200, animTimingFunction: Vivus.EASE_OUT});
 
     $('#fullpage').fullpage({
         // modified my copy of Fullscreen.js to not require this: scrollBar: true // scrollBar==true (or autoScrolling==false) must be set to allow other onScroll events to fire! (because w/o this option, the window doesn't actually scroll, as shown by observing $(window).scrollTop())
