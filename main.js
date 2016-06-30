@@ -150,22 +150,26 @@ $(document).ready(function () {
             var division = totalFrames * fraction;
             el.setAttribute("data-duration", division);
             prev += division;
-            console.log(key + i + ": start=" + el.getAttribute("data-start") + " duration=" + el.getAttribute("data-duration"));
+            // console.log(key + i + ": start=" + el.getAttribute("data-start") + " duration=" + el.getAttribute("data-duration"));
             // console.log(key + i + ": start=" + el.data("start") + " duration=" + el.data("duration"));
         }
     });
 
     var pathName = "rootlet";
     var prev = 0;
-    var rootLength = 100;
+    var rootLengths = [0, 100, 100, 70, 100, 100, 50, 40, 40, 15, 5];
     for (var i = 1; i <= 10; ++i) {
+        var start = prev - (3 * rootLengths[i] / 4);
         var el = document.getElementById(pathName + i + "a");
-        el.setAttribute("data-start", prev - (3 * rootLength / 4));
-        el.setAttribute("data-duration", rootLength);
+        el.setAttribute("data-start", start);
+        el.setAttribute("data-duration", rootLengths[i]);
         el = document.getElementById(pathName + i + "b");
-        el.setAttribute("data-start", prev - (3 * rootLength / 4));
-        el.setAttribute("data-duration", rootLength);
-        prev += rootLength;
+        el.setAttribute("data-start", start);
+        el.setAttribute("data-duration", rootLengths[i]);
+
+        console.log("rootlet" + i + " start=" + start + " #frames=" + rootLengths[i]);
+
+        prev += rootLengths[i];
     }
 
     var vivusTaproot = new Vivus("rootsNotWireframeMain", {type: "scenario", start: "manual"}, function () {
