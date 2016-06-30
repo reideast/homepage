@@ -156,7 +156,7 @@ $(document).ready(function () {
     });
 
     var pathName = "rootlet";
-    var prev = 0;
+    var prev = 100;
     var rootLengths = [0, 100, 100, 70, 100, 100, 50, 40, 40, 15, 5];
     for (var i = 1; i <= 10; ++i) {
         var start = prev - (3 * rootLengths[i] / 4);
@@ -166,10 +166,9 @@ $(document).ready(function () {
         el = document.getElementById(pathName + i + "b");
         el.setAttribute("data-start", start);
         el.setAttribute("data-duration", rootLengths[i]);
+        prev = start;
 
-        console.log("rootlet" + i + " start=" + start + " #frames=" + rootLengths[i]);
-
-        prev += rootLengths[i];
+        console.log("rootlet" + i + " start=" + start + " #frames=" + rootLengths[i] + " prev=" + prev);
     }
 
     var vivusTaproot = new Vivus("rootsNotWireframeMain", {type: "scenario", start: "manual"}, function () {
