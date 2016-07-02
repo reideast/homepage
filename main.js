@@ -92,7 +92,7 @@ $(document).ready(function () {
             vivusWireframe.play();
             window.setTimeout(function () {
                 vivusTaproot.play();
-            }, 400);
+            }, 1000);
             // vivusTaproot.play();
             
             // show text boxes
@@ -105,14 +105,17 @@ $(document).ready(function () {
                     }, 1200);
                 }, 1200);
             }, 3000);
+            
         }, 300);
     }
     function hideRoots() {
         $("#rootsOverlay").fadeIn(700);
-        vivusWireframe.reset();
-        $("#intro1, #intro2, #intro3").hide();
-        vivusTaproot.reset();
-        vivusRoots.reset();
+        window.setTimeout(function () {
+            vivusWireframe.reset();
+            $("#intro1, #intro2, #intro3").hide();
+            vivusTaproot.reset();
+            vivusRoots.reset();
+        }, 700);
     }
 
     for (i = 1; i <= 3; ++i) {
@@ -156,19 +159,17 @@ $(document).ready(function () {
     });
 
     var pathName = "rootlet";
-    var prev = 100;
-    var rootLengths = [0, 100, 100, 70, 100, 100, 50, 40, 40, 15, 5];
-    for (var i = 1; i <= 10; ++i) {
-        var start = prev - (3 * rootLengths[i] / 4);
-        var el = document.getElementById(pathName + i + "a");
-        el.setAttribute("data-start", start);
+    var rootLengths = [100, 100, 70, 100, 100,  50,  40,  40,  15,   5];
+    var rootStart =   [0,    25, 50,  90, 100, 130, 150, 180, 200, 210];
+    for (var i = 0; i < 10; ++i) {
+        var el = document.getElementById(pathName + (i + 1) + "a");
+        el.setAttribute("data-start", rootStart[i]);
         el.setAttribute("data-duration", rootLengths[i]);
-        el = document.getElementById(pathName + i + "b");
-        el.setAttribute("data-start", start);
+        el = document.getElementById(pathName + (i + 1) + "b");
+        el.setAttribute("data-start", rootStart[i]);
         el.setAttribute("data-duration", rootLengths[i]);
-        prev = start;
 
-        console.log("rootlet" + i + " start=" + start + " #frames=" + rootLengths[i] + " prev=" + prev);
+        console.log("rootlet" + i + " start=" + rootStart[i] + " #frames=" + rootLengths[i]);
     }
 
     var vivusTaproot = new Vivus("rootsNotWireframeMain", {type: "scenario", start: "manual"}, function () {
