@@ -124,7 +124,7 @@ $(document).ready(function () {
 
 
     var vivusWireframe = new Vivus('rootsWireframe', {start: "manual", duration: 75, delay: 30, type: "oneByOne", finalAnimation: function (path) {
-        window.setTimeout(function () { path.style.opacity = "0.3"; }, 5000);
+        window.setTimeout(function () { path.style.opacity = "0.3"; }, 400);
     }}); //, function () {
         //vivusTaproot.play();
     //});
