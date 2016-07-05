@@ -106,8 +106,8 @@ $(document).ready(function () {
                     setTimeout(function () {
                         $("#intro3").fadeIn(300);
                     }, 1200);
-                }, 1200);
-            }, 3000);
+                }, 1500);
+            }, 2800);
             
         }, 800);
     }
@@ -162,18 +162,20 @@ $(document).ready(function () {
     });
 
     var pathName = "rootlet";
-    var rootLengths = [100, 100, 70, 100, 100,  50,  40,  40,  15,   5];
-    var rootStart =   [40,   70, 120,  90, 100, 130, 150, 180, 200, 210];
-    rootStart = rootStart.map(function (item) { return item + 80; });
+    // var rootStart = [40, 70, 110, 55, 100, 150, 160, 180, 180, 200];
+    // rootStart = rootStart.map(function (item) { return item + 80; });
+    // console.log(rootStart + "");
+    var rootStart =     [120, 150, 190, 135, 180, 230, 240, 260, 260, 280];
+    var rootNumFrames = [ 80, 120,  60, 180, 100,  50,  40,  40,  15,   5];
     for (var i = 0; i < 10; ++i) {
         var el = document.getElementById(pathName + (i + 1) + "a");
         el.setAttribute("data-start", rootStart[i]);
-        el.setAttribute("data-duration", rootLengths[i]);
+        el.setAttribute("data-duration", rootNumFrames[i]);
         el = document.getElementById(pathName + (i + 1) + "b");
         el.setAttribute("data-start", rootStart[i]);
-        el.setAttribute("data-duration", rootLengths[i]);
+        el.setAttribute("data-duration", rootNumFrames[i]);
 
-        console.log("rootlet" + (i + 1) + " start=" + rootStart[i] + " #frames=" + rootLengths[i]);
+        console.log("rootlet" + (i + 1) + " start=" + rootStart[i] + " #frames=" + rootNumFrames[i]);
     }
 
     var vivusTaproot = new Vivus("rootsNotWireframeMain", {type: "scenario", start: "manual"}); //, function () {
